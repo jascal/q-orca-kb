@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "q-orca-kb"
+version = "0.1.0"
+description = "Quantum-computing paper knowledge base, built with Orca workflows + mempalace"
+requires-python = ">=3.11"
+dependencies = [
+    "orca-runtime-python>=0.1.26",
+    "mempalace>=3.1.0",
+    "arxiv>=2.1.0",
+    "pypdf>=5.0.0",
+]
+
+[project.scripts]
+q-orca-kb = "q_orca_kb.cli:main"
+q-orca-kb-mcp = "q_orca_kb.mcp_server:run"
+
+[tool.setuptools.packages.find]
+include = ["q_orca_kb*"]
