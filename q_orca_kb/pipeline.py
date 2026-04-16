@@ -11,6 +11,8 @@ the topology. This module:
 
 from __future__ import annotations
 
+import asyncio
+import functools
 import logging
 import os
 from dataclasses import dataclass
@@ -39,8 +41,14 @@ class IndexJobResult:
     attempts: int
 
 
+_WORKFLOW_DEFINITION: Any = None
+
+
 def _load_machine() -> Any:
-    return parse_orca_md(WORKFLOW_PATH.read_text())
+    global _WORKFLOW_DEFINITION
+    if _WORKFLOW_DEFINITION is None:
+        _WORKFLOW_DEFINITION = parse_orca_md(WORKFLOW_PATH.read_text())
+    return _WORKFLOW_DEFINITION
 
 
 def _register_actions(machine: OrcaMachine) -> None:
@@ -66,7 +74,9 @@ def _register_actions(machine: OrcaMachine) -> None:
 
     def record_error(ctx, event):
         payload = event or {}
-        return {"error": payload.get("error", "unknown error")}
+        prev = ctx.get("error", "")
+        new = payload.get("error", "unknown error")
+        return {"error": f"{prev}; {new}" if prev else new}
 
     def bump_attempts(ctx, event):
         return {"attempts": ctx.get("attempts", 0) + 1, "error": ""}
@@ -115,69 +125,81 @@ async def index_one(
 
     await machine.send("start", {"arxiv_id": arxiv_id, "wing": wing})
 
-    while True:
-        state = str(machine.state)
-        log.debug("paper=%s state=%s", arxiv_id, state)
+    try:
+        while True:
+            state = str(machine.state)
+            log.debug("paper=%s state=%s", arxiv_id, state)
 
-        if state in ("done", "aborted"):
-            break
+            if state in ("done", "aborted"):
+                break
 
-        if state == "fetching":
-            try:
-                result = fetch_arxiv(arxiv_id, pdf_dir)
-                await machine.send("fetch_ok", {"pdf_path": result.pdf_path})
-            except Exception as e:
-                log.warning("fetch failed for %s: %s", arxiv_id, e)
-                await machine.send("fetch_failed", {"error": f"fetch: {e}"})
+            if state == "fetching":
+                try:
+                    loop = asyncio.get_event_loop()
+                    result = await loop.run_in_executor(
+                        None, functools.partial(fetch_arxiv, arxiv_id, pdf_dir)
+                    )
+                    await machine.send("fetch_ok", {"pdf_path": result.pdf_path})
+                except Exception as e:
+                    log.warning("fetch failed for %s: %s", arxiv_id, e)
+                    await machine.send("fetch_failed", {"error": f"fetch: {e}"})
 
-        elif state == "extracting":
-            try:
-                pdf_path = machine.context.get("pdf_path", "")
-                text = extract_text(pdf_path)
-                if not text.strip():
-                    raise ValueError("extracted empty text")
-                await machine.send("extract_ok", {"text": text})
-            except Exception as e:
-                log.warning("extract failed for %s: %s", arxiv_id, e)
-                await machine.send("extract_failed", {"error": f"extract: {e}"})
+            elif state == "extracting":
+                try:
+                    pdf_path = machine.context.get("pdf_path", "")
+                    loop = asyncio.get_event_loop()
+                    text = await loop.run_in_executor(
+                        None, extract_text, pdf_path
+                    )
+                    if not text.strip():
+                        raise ValueError("extracted empty text")
+                    await machine.send("extract_ok", {"text": text})
+                except Exception as e:
+                    log.warning("extract failed for %s: %s", arxiv_id, e)
+                    await machine.send("extract_failed", {"error": f"extract: {e}"})
 
-        elif state == "indexing":
-            try:
-                text = machine.context.get("text", "")
-                pdf_path = machine.context.get("pdf_path", "")
-                result = index_paper(
-                    palace_path=palace_path,
-                    wing=wing,
-                    room=room,
-                    arxiv_id=arxiv_id,
-                    source_file=pdf_path,
-                    text=text,
-                )
-                await machine.send(
-                    "index_ok",
-                    {
-                        "chunk_count": result.chunk_count,
-                        "indexed_count": result.indexed_count,
-                    },
-                )
-            except Exception as e:
-                log.warning("index failed for %s: %s", arxiv_id, e)
-                await machine.send("index_failed", {"error": f"index: {e}"})
+            elif state == "indexing":
+                try:
+                    text = machine.context.get("text", "")
+                    pdf_path = machine.context.get("pdf_path", "")
+                    loop = asyncio.get_event_loop()
+                    result = await loop.run_in_executor(
+                        None,
+                        functools.partial(
+                            index_paper,
+                            palace_path=palace_path,
+                            wing=wing,
+                            room=room,
+                            arxiv_id=arxiv_id,
+                            source_file=pdf_path,
+                            text=text,
+                        ),
+                    )
+                    await machine.send(
+                        "index_ok",
+                        {
+                            "chunk_count": result.chunk_count,
+                            "indexed_count": result.indexed_count,
+                        },
+                    )
+                except Exception as e:
+                    log.warning("index failed for %s: %s", arxiv_id, e)
+                    await machine.send("index_failed", {"error": f"index: {e}"})
 
-        elif state == "failed":
-            if machine.context.get("attempts", 0) + 1 < machine.context.get("max_attempts", 3):
-                await machine.send("retry")
+            elif state == "failed":
+                if machine.context.get("attempts", 0) + 1 < machine.context.get("max_attempts", 3):
+                    await machine.send("retry")
+                else:
+                    await machine.send("give_up")
+
             else:
-                await machine.send("give_up")
-
-        else:
-            # Unknown state — bail out to avoid an infinite loop
-            log.error("paper=%s stuck in unknown state %s", arxiv_id, state)
-            break
-
-    final_state = str(machine.state)
-    ctx = machine.context
-    await machine.stop()
+                # Unknown state — bail out to avoid an infinite loop
+                log.error("paper=%s stuck in unknown state %s", arxiv_id, state)
+                break
+    finally:
+        final_state = str(machine.state)
+        ctx = machine.context
+        await machine.stop()
     return IndexJobResult(
         arxiv_id=arxiv_id,
         wing=wing,

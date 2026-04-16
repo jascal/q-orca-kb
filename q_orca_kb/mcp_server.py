@@ -210,6 +210,9 @@ def _palace_drawer_count(palace_path: str) -> int:
         coll = palace_mod.get_collection(palace_path)
         return int(coll.count())
     except Exception:
+        logging.getLogger(__name__).warning(
+            "could not read palace drawer count at %s", palace_path, exc_info=True
+        )
         return 0
 
 
@@ -294,22 +297,34 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
         seeds = SEEDS[:limit] if limit > 0 else SEEDS
         results = []
         for seed in seeds:
-            res = await index_one(
-                arxiv_id=seed.arxiv_id,
-                wing=seed.wing,
-                room=seed.room,
-                palace_path=DEFAULT_PALACE,
-                pdf_dir=DEFAULT_PDF_DIR,
-            )
-            results.append(
-                {
-                    "arxiv_id": res.arxiv_id,
-                    "wing": res.wing,
-                    "final_state": res.final_state,
-                    "indexed_count": res.indexed_count,
-                    "error": res.error,
-                }
-            )
+            try:
+                res = await index_one(
+                    arxiv_id=seed.arxiv_id,
+                    wing=seed.wing,
+                    room=seed.room,
+                    palace_path=DEFAULT_PALACE,
+                    pdf_dir=DEFAULT_PDF_DIR,
+                )
+                results.append(
+                    {
+                        "arxiv_id": res.arxiv_id,
+                        "wing": res.wing,
+                        "final_state": res.final_state,
+                        "indexed_count": res.indexed_count,
+                        "error": res.error,
+                    }
+                )
+            except Exception as e:
+                logging.exception("index_seeds: seed %s failed", seed.arxiv_id)
+                results.append(
+                    {
+                        "arxiv_id": seed.arxiv_id,
+                        "wing": seed.wing,
+                        "final_state": "error",
+                        "indexed_count": 0,
+                        "error": f"{type(e).__name__}: {e}",
+                    }
+                )
         return {
             "indexed": sum(1 for r in results if r["final_state"] == "done"),
             "total": len(results),
