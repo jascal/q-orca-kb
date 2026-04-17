@@ -17,14 +17,18 @@ Environment variables:
 from __future__ import annotations
 
 import asyncio
+import functools
 import json
 import logging
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
 from . import __version__
+from .extractors.pdf_extractor import extract_text
+from .indexers.mempalace_indexer import index_paper as mp_index_paper
 from .indexers.mempalace_indexer import search as mp_search
 from .pipeline import index_one
 from .seeds import SEEDS, Seed
@@ -41,6 +45,13 @@ DEFAULT_PALACE = os.environ.get(
 DEFAULT_PDF_DIR = os.environ.get(
     "Q_ORCA_KB_PDF_DIR", str(DEFAULT_PROJECT_ROOT / "data" / "pdfs")
 )
+
+# ---------------------------------------------------------------------------
+# Background job tracker for long-running local PDF indexing
+# ---------------------------------------------------------------------------
+
+_PDF_JOBS: dict[str, dict[str, Any]] = {}   # job_id -> status dict
+
 
 MCP_INSTRUCTIONS = """q-orca-kb MCP server — quantum-computing paper knowledge base.
 
@@ -179,6 +190,61 @@ TOOLS: list[dict[str, Any]] = [
                 }
             },
             "required": [],
+        },
+    },
+    {
+        "name": "index_local_pdf",
+        "description": (
+            "Index a local PDF file from the pdf_dir into the palace. "
+            "Use this for textbooks, preprints, or any PDF already placed in the "
+            "q-orca-kb data/pdfs directory. Does not require an arXiv id. Idempotent."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "filename": {
+                    "type": "string",
+                    "description": (
+                        "Filename of the PDF (basename only, no path), e.g. "
+                        "'quantum-computation-and-quantum-information-nielsen-chuang.pdf'. "
+                        "The file must already exist in the pdf_dir."
+                    ),
+                },
+                "wing": {
+                    "type": "string",
+                    "description": "Wing to file the document under (e.g. q-orca-physics).",
+                },
+                "room": {
+                    "type": "string",
+                    "description": "Room within the wing (e.g. textbook).",
+                },
+                "name": {
+                    "type": "string",
+                    "description": (
+                        "Display name / label for the document "
+                        "(defaults to the filename stem)."
+                    ),
+                },
+            },
+            "required": ["filename", "wing", "room"],
+        },
+    },
+    {
+        "name": "index_local_pdf_status",
+        "description": (
+            "Check the status of a background local-PDF indexing job started by "
+            "index_local_pdf. Returns job state (running / done / error), "
+            "elapsed seconds, and chunk counts when complete."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "job_id": {
+                    "type": "string",
+                    "description": "The job_id returned by index_local_pdf.",
+                }
+            },
+            "required": ["job_id"],
         },
     },
     {
@@ -330,6 +396,89 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
             "total": len(results),
             "results": results,
         }
+
+    if name == "index_local_pdf":
+        filename = arguments.get("filename", "").strip()
+        wing = arguments.get("wing", "").strip()
+        room = arguments.get("room", "").strip()
+        if not filename:
+            return {"error": "filename is required"}
+        if not wing or not room:
+            return {"error": "wing and room are required"}
+        pdf_path = Path(DEFAULT_PDF_DIR) / filename
+        if not pdf_path.exists():
+            return {"error": f"PDF not found at {pdf_path}"}
+        display_name = arguments.get("name") or pdf_path.stem
+
+        job_id = f"pdf-{int(time.time())}-{filename[:20]}"
+        _PDF_JOBS[job_id] = {
+            "job_id": job_id,
+            "filename": filename,
+            "name": display_name,
+            "wing": wing,
+            "room": room,
+            "state": "running",
+            "started_at": time.time(),
+            "chunk_count": 0,
+            "indexed_count": 0,
+            "error": None,
+        }
+
+        async def _run_indexing(jid: str, path: str, dname: str, w: str, r: str) -> None:
+            loop = asyncio.get_event_loop()
+            try:
+                text = await loop.run_in_executor(None, extract_text, path)
+                if not text.strip():
+                    raise ValueError("extracted empty text — PDF may be scanned/image-only")
+                result = await loop.run_in_executor(
+                    None,
+                    functools.partial(
+                        mp_index_paper,
+                        palace_path=DEFAULT_PALACE,
+                        wing=w,
+                        room=r,
+                        arxiv_id=dname,
+                        source_file=filename,
+                        text=text,
+                    ),
+                )
+                _PDF_JOBS[jid].update(
+                    state="done",
+                    chunk_count=result.chunk_count,
+                    indexed_count=result.indexed_count,
+                    elapsed=round(time.time() - _PDF_JOBS[jid]["started_at"], 1),
+                )
+            except Exception as exc:
+                _PDF_JOBS[jid].update(
+                    state="error",
+                    error=f"{type(exc).__name__}: {exc}",
+                    elapsed=round(time.time() - _PDF_JOBS[jid]["started_at"], 1),
+                )
+
+        asyncio.ensure_future(
+            _run_indexing(job_id, str(pdf_path), display_name, wing, room)
+        )
+        return {
+            "job_id": job_id,
+            "state": "running",
+            "message": (
+                f"Indexing started in background. "
+                f"Poll index_local_pdf_status with job_id='{job_id}' to track progress, "
+                f"or watch kb_status drawer_count climb."
+            ),
+        }
+
+    if name == "index_local_pdf_status":
+        job_id = arguments.get("job_id", "").strip()
+        if not job_id:
+            return {"error": "job_id is required"}
+        job = _PDF_JOBS.get(job_id)
+        if job is None:
+            return {"error": f"No job found with id '{job_id}'"}
+        out = dict(job)
+        if out["state"] == "running":
+            out["elapsed"] = round(time.time() - out["started_at"], 1)
+        return out
 
     if name == "server_status":
         return {

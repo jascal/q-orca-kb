@@ -211,3 +211,6 @@ __marimo__/
 
 # OS
 .DS_Store
+
+# q-orca-kb PDF cache — never commit (may contain copyrighted material)
+data/pdfs/
