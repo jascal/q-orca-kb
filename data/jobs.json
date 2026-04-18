@@ -1,0 +1,123 @@
+{
+  "batch_index-1776477573-1-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776477573-1-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "1-papers-q-orca-physics/oracle-algorithms",
+    "state": "done",
+    "started_at": 1776477573.082547,
+    "finished_at": 1776477601.446505,
+    "elapsed": 28.4,
+    "args": {
+      "arxiv_ids": [
+        "quant-ph/9707031"
+      ],
+      "wing": "q-orca-physics",
+      "room": "oracle-algorithms"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "quant-ph/9707031",
+          "state": "done",
+          "indexed_count": 118,
+          "error": ""
+        }
+      ],
+      "done": 1,
+      "total": 1
+    },
+    "error": null
+  },
+  "batch_index-1776477728-10-papers-q-orca-impleme": {
+    "job_id": "batch_index-1776477728-10-papers-q-orca-impleme",
+    "tool": "batch_index",
+    "label": "10-papers-q-orca-implementations/dynamic-circuits",
+    "state": "done",
+    "started_at": 1776477728.3136482,
+    "finished_at": 1776478023.966399,
+    "elapsed": 295.7,
+    "args": {
+      "arxiv_ids": [
+        "2402.17833",
+        "2302.01917",
+        "2412.07969",
+        "2403.09514",
+        "2211.01925",
+        "2406.07611",
+        "2407.02858",
+        "2504.21250",
+        "2604.11599",
+        "2604.03360"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "dynamic-circuits"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2402.17833",
+          "state": "done",
+          "indexed_count": 110,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2302.01917",
+          "state": "done",
+          "indexed_count": 89,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2412.07969",
+          "state": "done",
+          "indexed_count": 147,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2403.09514",
+          "state": "done",
+          "indexed_count": 76,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2211.01925",
+          "state": "done",
+          "indexed_count": 94,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2406.07611",
+          "state": "done",
+          "indexed_count": 216,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2407.02858",
+          "state": "done",
+          "indexed_count": 104,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2504.21250",
+          "state": "done",
+          "indexed_count": 56,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.11599",
+          "state": "done",
+          "indexed_count": 39,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.03360",
+          "state": "done",
+          "indexed_count": 126,
+          "error": ""
+        }
+      ],
+      "done": 10,
+      "total": 10
+    },
+    "error": null
+  }
+}
