@@ -119,5 +119,356 @@
       "total": 10
     },
     "error": null
+  },
+  "batch_index-1776522859-3-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776522859-3-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-physics/formal-methods",
+    "state": "done",
+    "started_at": 1776522859.700717,
+    "finished_at": 1776523045.108462,
+    "elapsed": 185.4,
+    "args": {
+      "arxiv_ids": [
+        "2012.13966",
+        "1904.04735",
+        "0906.4725"
+      ],
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2012.13966",
+          "state": "done",
+          "indexed_count": 361,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1904.04735",
+          "state": "done",
+          "indexed_count": 58,
+          "error": ""
+        },
+        {
+          "arxiv_id": "0906.4725",
+          "state": "done",
+          "indexed_count": 278,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
+  },
+  "batch_index-1776522860-3-papers-q-orca-implemen": {
+    "job_id": "batch_index-1776522860-3-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-implementations/formal-methods",
+    "state": "done",
+    "started_at": 1776522860.502342,
+    "finished_at": 1776522993.469291,
+    "elapsed": 133.0,
+    "args": {
+      "arxiv_ids": [
+        "2004.03082",
+        "2204.09033",
+        "2012.01600"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "formal-methods"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2004.03082",
+          "state": "done",
+          "indexed_count": 165,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2204.09033",
+          "state": "done",
+          "indexed_count": 150,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2012.01600",
+          "state": "done",
+          "indexed_count": 22,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
+  },
+  "batch_index-1776522861-3-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776522861-3-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-physics/formal-methods",
+    "state": "done",
+    "started_at": 1776522861.527539,
+    "finished_at": 1776522959.005727,
+    "elapsed": 97.5,
+    "args": {
+      "arxiv_ids": [
+        "2307.05492",
+        "2401.08922",
+        "2212.09706"
+      ],
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2307.05492",
+          "state": "done",
+          "indexed_count": 72,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2401.08922",
+          "state": "done",
+          "indexed_count": 96,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2212.09706",
+          "state": "done",
+          "indexed_count": 139,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
+  },
+  "batch_index-1776541082-2-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776541082-2-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "2-papers-q-orca-physics/dirac-decision",
+    "state": "done",
+    "started_at": 1776541082.3445601,
+    "finished_at": 1776541296.5095239,
+    "elapsed": 214.2,
+    "args": {
+      "arxiv_ids": [
+        "2411.11617",
+        "2505.08633"
+      ],
+      "wing": "q-orca-physics",
+      "room": "dirac-decision"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2411.11617",
+          "state": "done",
+          "indexed_count": 272,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2505.08633",
+          "state": "done",
+          "indexed_count": 156,
+          "error": ""
+        }
+      ],
+      "done": 2,
+      "total": 2
+    },
+    "error": null
+  },
+  "batch_index-1776541082-3-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776541082-3-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-physics/zx-calculus",
+    "state": "done",
+    "started_at": 1776541082.367201,
+    "finished_at": 1776541242.7905972,
+    "elapsed": 160.4,
+    "args": {
+      "arxiv_ids": [
+        "1705.11151",
+        "1902.03178",
+        "1903.10477"
+      ],
+      "wing": "q-orca-physics",
+      "room": "zx-calculus"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1705.11151",
+          "state": "done",
+          "indexed_count": 85,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1902.03178",
+          "state": "done",
+          "indexed_count": 126,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1903.10477",
+          "state": "done",
+          "indexed_count": 72,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
+  },
+  "batch_index-1776541082-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776541082-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/verified-compilation",
+    "state": "error",
+    "started_at": 1776541082.380526,
+    "finished_at": 1776541394.421431,
+    "elapsed": 312.0,
+    "args": {
+      "arxiv_ids": [
+        "1912.02250",
+        "2003.05841",
+        "2207.11350",
+        "2308.04741",
+        "2504.07732"
+      ],
+      "wing": "q-orca-physics",
+      "room": "verified-compilation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1912.02250",
+          "state": "done",
+          "indexed_count": 200,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2003.05841",
+          "state": "done",
+          "indexed_count": 229,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2207.11350",
+          "state": "done",
+          "indexed_count": 186,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2308.04741",
+          "state": "done",
+          "indexed_count": 146,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2504.07732",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 4,
+      "total": 5
+    },
+    "error": "1 paper(s) failed"
+  },
+  "batch_index-1776541082-3-papers-q-orca-implemen": {
+    "job_id": "batch_index-1776541082-3-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-implementations/llm-proof-synthesis",
+    "state": "done",
+    "started_at": 1776541082.393707,
+    "finished_at": 1776541287.1432772,
+    "elapsed": 204.7,
+    "args": {
+      "arxiv_ids": [
+        "2306.15626",
+        "2409.14274",
+        "2505.05758"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "llm-proof-synthesis"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2306.15626",
+          "state": "done",
+          "indexed_count": 177,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2409.14274",
+          "state": "done",
+          "indexed_count": 110,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2505.05758",
+          "state": "done",
+          "indexed_count": 103,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
+  },
+  "batch_index-1776548726-3-papers-q-orca-physics/": {
+    "job_id": "batch_index-1776548726-3-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-physics/formal-methods",
+    "state": "done",
+    "started_at": 1776548726.300066,
+    "finished_at": 1776548827.8732312,
+    "elapsed": 101.6,
+    "args": {
+      "arxiv_ids": [
+        "2306.15626",
+        "2205.12615",
+        "2310.00656"
+      ],
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2306.15626",
+          "state": "done",
+          "indexed_count": 177,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2205.12615",
+          "state": "done",
+          "indexed_count": 158,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2310.00656",
+          "state": "done",
+          "indexed_count": 143,
+          "error": ""
+        }
+      ],
+      "done": 3,
+      "total": 3
+    },
+    "error": null
   }
 }
