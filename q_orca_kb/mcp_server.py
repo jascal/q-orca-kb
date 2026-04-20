@@ -32,7 +32,10 @@ from pathlib import Path
 from typing import Any
 
 from . import __version__
+from .crawlers import SITE_CONFIGS
 from .extractors.pdf_extractor import extract_text
+from .extractors.web_extractor import WebPageSection
+from .fetchers.web_crawler import crawl, new_progress
 from .indexers.mempalace_indexer import index_paper as mp_index_paper
 from .indexers.mempalace_indexer import search as mp_search
 from .pipeline import index_one
@@ -52,6 +55,7 @@ DEFAULT_PDF_DIR = os.environ.get(
     "Q_ORCA_KB_PDF_DIR", str(DEFAULT_PROJECT_ROOT / "data" / "pdfs")
 )
 JOBS_PATH = DEFAULT_PROJECT_ROOT / "data" / "jobs.json"
+WEB_INDEX_PATH = DEFAULT_PROJECT_ROOT / "data" / "web_index.json"
 JOB_TTL_DAYS = 7
 
 
@@ -123,6 +127,33 @@ def _finish_job(job: dict[str, Any], result: Any = None, error: str | None = Non
     _save_jobs()
 
 
+# ---------------------------------------------------------------------------
+# Persistent web-page dedup index
+# ---------------------------------------------------------------------------
+
+_WEB_INDEX: dict[str, dict[str, Any]] = {}
+
+
+def _load_web_index() -> None:
+    global _WEB_INDEX
+    if not WEB_INDEX_PATH.exists():
+        _WEB_INDEX = {}
+        return
+    try:
+        _WEB_INDEX = json.loads(WEB_INDEX_PATH.read_text())
+    except Exception:
+        log.warning("Could not load web_index from %s", WEB_INDEX_PATH, exc_info=True)
+        _WEB_INDEX = {}
+
+
+def _save_web_index() -> None:
+    try:
+        WEB_INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
+        WEB_INDEX_PATH.write_text(json.dumps(_WEB_INDEX, indent=2, default=str))
+    except Exception:
+        log.warning("Could not save web_index to %s", WEB_INDEX_PATH, exc_info=True)
+
+
 MCP_INSTRUCTIONS = """q-orca-kb MCP server — quantum-computing paper knowledge base.
 
 Built on the Orca PaperIndexing state machine + mempalace vector store. Use this
@@ -142,10 +173,15 @@ computation, quantum error correction, VQE/QAOA, surface codes, OpenQASM, etc.
 6. `index_seeds { limit? }` — bulk-index all curated seed papers.
 7. `index_local_pdf { filename, wing, room }` — index a PDF already in pdf_dir.
 
+### Web crawling (vendor documentation)
+
+8. `list_crawl_sites` — available site keys (IBM, Microsoft, NVIDIA quantum docs).
+9. `crawl_site { site_key, max_pages?, force? }` — BFS crawl + index a doc site.
+
 ### Job tracking
 
-8. `job_status { job_id }` — check state (running/done/error) + result.
-9. `list_jobs { state?, limit? }` — list recent jobs.
+10. `job_status { job_id }` — check state (running/done/error) + result.
+11. `list_jobs { state?, limit? }` — list recent jobs.
 
 ## Wings & rooms (the palace topology)
 
@@ -272,6 +308,41 @@ TOOLS: list[dict[str, Any]] = [
                 "name": {"type": "string", "description": "Display name (defaults to filename stem)."},
             },
             "required": ["filename", "wing", "room"],
+        },
+    },
+    {
+        "name": "list_crawl_sites",
+        "description": (
+            "List available site keys for crawl_site, with their configured wing/room "
+            "and estimated page count."
+        ),
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "crawl_site",
+        "description": (
+            "Crawl a quantum vendor documentation site and index all pages into the "
+            "palace. Returns a job_id immediately — poll job_status to track progress. "
+            "Use list_crawl_sites to see available site keys."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "site_key": {
+                    "type": "string",
+                    "description": "Site key from list_crawl_sites (e.g. 'ibm-quantum-docs').",
+                },
+                "max_pages": {
+                    "type": "integer",
+                    "description": "Override the site config's default max_pages.",
+                },
+                "force": {
+                    "type": "boolean",
+                    "description": "Re-index pages even if content hash is unchanged.",
+                    "default": False,
+                },
+            },
+            "required": ["site_key"],
         },
     },
     {
@@ -435,6 +506,90 @@ async def _run_index_seeds(job: dict[str, Any], seeds: list[Seed]) -> None:
     )
 
 
+async def _run_crawl(job: dict[str, Any], config: Any, force: bool) -> None:
+    """Drive the BFS crawler, index each page section, persist progress."""
+    progress = new_progress(config.site_key)
+    job["result"] = {
+        "progress": progress,
+        "site_key": config.site_key,
+        "wing": config.wing,
+        "room": config.room,
+    }
+    _save_jobs()
+
+    try:
+        from playwright.async_api import async_playwright
+    except ImportError as exc:
+        _finish_job(
+            job,
+            error=(
+                f"Playwright not installed: {exc}. "
+                f"Run `pip install -e .` then `playwright install chromium`."
+            ),
+        )
+        return
+
+    loop = asyncio.get_event_loop()
+    pages_since_save = 0
+
+    def _index_section(page_url: str, sec: WebPageSection) -> int:
+        source = f"{page_url}#{sec.heading}" if sec.heading else page_url
+        result = mp_index_paper(
+            palace_path=DEFAULT_PALACE,
+            wing=config.wing,
+            room=config.room,
+            arxiv_id=page_url,
+            source_file=source,
+            text=sec.text,
+        )
+        return result.indexed_count
+
+    try:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(headless=True)
+            try:
+                async for page in crawl(browser, config, progress):
+                    prev = _WEB_INDEX.get(page.url)
+                    unchanged = (
+                        prev is not None
+                        and prev.get("content_hash") == page.content_hash
+                    )
+                    if unchanged and not force:
+                        progress["skipped"] += 1
+                    else:
+                        sections = page.sections or [
+                            WebPageSection(heading="", text=page.text)
+                        ]
+                        drawer_count = 0
+                        for sec in sections:
+                            if not sec.text.strip():
+                                continue
+                            drawer_count += await loop.run_in_executor(
+                                None, functools.partial(_index_section, page.url, sec)
+                            )
+                        _WEB_INDEX[page.url] = {
+                            "content_hash": page.content_hash,
+                            "indexed_at": time.time(),
+                            "drawer_count": drawer_count,
+                        }
+                        progress["indexed"] += 1
+
+                    pages_since_save += 1
+                    if pages_since_save >= 10:
+                        _save_jobs()
+                        _save_web_index()
+                        pages_since_save = 0
+                    else:
+                        _save_jobs()
+            finally:
+                await browser.close()
+        _save_web_index()
+        _finish_job(job, result=job["result"])
+    except Exception as exc:
+        _save_web_index()
+        _finish_job(job, error=f"{type(exc).__name__}: {exc}")
+
+
 async def _run_index_local_pdf(
     job: dict[str, Any],
     pdf_path: str,
@@ -536,6 +691,21 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
             "filters": response.get("filters"),
             "result_count": len(response.get("results", [])),
             "results": response.get("results", []),
+        }
+
+    if name == "list_crawl_sites":
+        return {
+            "count": len(SITE_CONFIGS),
+            "sites": [
+                {
+                    "site_key": cfg.site_key,
+                    "wing": cfg.wing,
+                    "room": cfg.room,
+                    "max_pages": cfg.max_pages,
+                    "seeds": list(cfg.seeds),
+                }
+                for cfg in SITE_CONFIGS.values()
+            ],
         }
 
     if name == "job_status":
@@ -640,6 +810,39 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
             ),
         }
 
+    if name == "crawl_site":
+        site_key = arguments.get("site_key", "").strip()
+        if not site_key:
+            return {"error": "site_key is required"}
+        config = SITE_CONFIGS.get(site_key)
+        if config is None:
+            return {
+                "error": (
+                    f"Unknown site_key '{site_key}'. "
+                    f"Available: {sorted(SITE_CONFIGS.keys())}"
+                )
+            }
+        max_pages = arguments.get("max_pages")
+        force = bool(arguments.get("force", False))
+        if isinstance(max_pages, int) and max_pages > 0:
+            from dataclasses import replace
+            config = replace(config, max_pages=max_pages)
+        job = _new_job(
+            "crawl_site",
+            site_key,
+            {"site_key": site_key, "max_pages": config.max_pages, "force": force},
+        )
+        asyncio.ensure_future(_run_crawl(job, config, force))
+        return {
+            "job_id": job["job_id"],
+            "site_key": site_key,
+            "state": "running",
+            "message": (
+                f"Crawling {site_key} in background (max {config.max_pages} pages). "
+                f"Poll job_status with job_id='{job['job_id']}'."
+            ),
+        }
+
     if name == "index_local_pdf":
         filename = arguments.get("filename", "").strip()
         wing = arguments.get("wing", "").strip()
@@ -736,6 +939,7 @@ async def handle_request(request: dict[str, Any]) -> dict[str, Any] | None:
 
 async def main() -> None:
     _load_jobs()  # restore persisted jobs on startup
+    _load_web_index()  # restore per-URL content-hash dedup store
 
     loop = asyncio.get_event_loop()
     reader = asyncio.StreamReader()
