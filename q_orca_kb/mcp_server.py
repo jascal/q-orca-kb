@@ -37,6 +37,7 @@ from .extractors.pdf_extractor import extract_text
 from .extractors.web_extractor import WebPageSection
 from .fetchers.web_crawler import crawl, new_progress
 from .indexers.mempalace_indexer import index_paper as mp_index_paper
+from .indexers.mempalace_indexer import list_sources as mp_list_sources
 from .indexers.mempalace_indexer import search as mp_search
 from .pipeline import index_one
 from .seeds import SEEDS, Seed
@@ -162,9 +163,10 @@ computation, quantum error correction, VQE/QAOA, surface codes, OpenQASM, etc.
 
 ## Workflow
 
-1. `kb_status`   — palace stats: drawer count, location.
-2. `list_seeds`  — curated arXiv papers shipped with q-orca-kb.
-3. `search_papers { query, wing?, room?, n? }` — semantic search.
+1. `kb_status`    — palace stats: drawer count, source count, location.
+2. `list_seeds`   — curated arXiv papers shipped with q-orca-kb.
+3. `list_sources { wing?, room?, source_type? }` — distinct sources actually indexed.
+4. `search_papers { query, wing?, room?, n? }` — semantic search.
 
 ### Indexing (all async — return job_id immediately)
 
@@ -202,7 +204,11 @@ them empty for cross-cutting queries. Search results include similarity scores
 TOOLS: list[dict[str, Any]] = [
     {
         "name": "kb_status",
-        "description": "Show palace stats: location, drawer count, seed paper count.",
+        "description": (
+            "Show palace stats: location, drawer count, seed paper count, and "
+            "source count (distinct (wing, room, source_file) tuples currently "
+            "indexed)."
+        ),
         "inputSchema": {"type": "object", "properties": {}, "required": []},
     },
     {
@@ -212,6 +218,29 @@ TOOLS: list[dict[str, Any]] = [
             "their wing/room assignments."
         ),
         "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "list_sources",
+        "description": (
+            "Enumerate distinct sources currently in the palace, grouped by "
+            "(wing, room, source_file). Returns drawer_count and first/last "
+            "indexed_at timestamps for each source. Filter by wing, room, or "
+            "source_type (arxiv | pdf | web). Drawers indexed before timestamps "
+            "were introduced return null for both timestamp fields; their "
+            "source_type is inferred from the source_file shape."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "wing": {"type": "string", "description": "Filter to one wing."},
+                "room": {"type": "string", "description": "Filter to one room."},
+                "source_type": {
+                    "type": "string",
+                    "description": "Filter by source type: arxiv, pdf, or web.",
+                },
+            },
+            "required": [],
+        },
     },
     {
         "name": "search_papers",
@@ -541,6 +570,7 @@ async def _run_crawl(job: dict[str, Any], config: Any, force: bool) -> None:
             arxiv_id=page_url,
             source_file=source,
             text=sec.text,
+            source_type="web",
         )
         return result.indexed_count
 
@@ -613,6 +643,7 @@ async def _run_index_local_pdf(
                 arxiv_id=display_name,
                 source_file=filename,
                 text=text,
+                source_type="pdf",
             ),
         )
         _finish_job(job, result={
@@ -656,11 +687,17 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
     # --- fast synchronous tools ---
 
     if name == "kb_status":
+        try:
+            source_count = len(mp_list_sources(DEFAULT_PALACE))
+        except Exception:
+            log.warning("could not compute source_count", exc_info=True)
+            source_count = 0
         return {
             "palace_path": DEFAULT_PALACE,
             "pdf_dir": DEFAULT_PDF_DIR,
             "drawer_count": _palace_drawer_count(DEFAULT_PALACE),
             "seed_count": len(SEEDS),
+            "source_count": source_count,
             "version": __version__,
         }
 
@@ -672,6 +709,18 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> dict[str, Any]:
                 for s in SEEDS
             ],
         }
+
+    if name == "list_sources":
+        wing = arguments.get("wing")
+        room = arguments.get("room")
+        source_type = arguments.get("source_type")
+        sources = mp_list_sources(
+            palace_path=DEFAULT_PALACE,
+            wing=wing,
+            room=room,
+            source_type=source_type,
+        )
+        return {"count": len(sources), "sources": sources}
 
     if name == "search_papers":
         query = arguments.get("query", "").strip()

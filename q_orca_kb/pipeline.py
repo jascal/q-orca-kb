@@ -173,6 +173,7 @@ async def index_one(
                             arxiv_id=arxiv_id,
                             source_file=pdf_path,
                             text=text,
+                            source_type="arxiv",
                         ),
                     )
                     await machine.send(
