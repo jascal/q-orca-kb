@@ -63,4 +63,22 @@ SITE_CONFIGS: dict[str, CrawlConfig] = {
         room="nvidia-cudaqx",
         max_pages=300,
     ),
+    "orca-lang-wiki": CrawlConfig(
+        site_key="orca-lang-wiki",
+        seeds=["https://deepwiki.com/jascal/orca-lang"],
+        allow_patterns=[r"deepwiki\.com/jascal/orca-lang(/|$)"],
+        block_patterns=[r"/edit", r"/search"],
+        wing="q-orca-implementations",
+        room="orca-lang",
+        max_pages=150,
+    ),
+    "q-orca-lang-wiki": CrawlConfig(
+        site_key="q-orca-lang-wiki",
+        seeds=["https://deepwiki.com/jascal/q-orca-lang"],
+        allow_patterns=[r"deepwiki\.com/jascal/q-orca-lang(/|$)"],
+        block_patterns=[r"/edit", r"/search"],
+        wing="q-orca-implementations",
+        room="q-orca-lang",
+        max_pages=150,
+    ),
 }

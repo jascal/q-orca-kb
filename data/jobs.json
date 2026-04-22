@@ -1,11 +1,11 @@
 {
-  "crawl_site-1776728706-ibm-quantum-docs": {
-    "job_id": "crawl_site-1776728706-ibm-quantum-docs",
+  "crawl_site-1776728774-ibm-quantum-docs": {
+    "job_id": "crawl_site-1776728774-ibm-quantum-docs",
     "tool": "crawl_site",
     "label": "ibm-quantum-docs",
     "state": "done",
-    "started_at": 1776728706.978616,
-    "finished_at": 1776728706.979656,
+    "started_at": 1776728774.2288342,
+    "finished_at": 1776728774.230264,
     "elapsed": 0.0,
     "args": {
       "site_key": "ibm-quantum-docs",
@@ -23,6 +23,208 @@
         "current_url": ""
       },
       "site_key": "ibm-quantum-docs"
+    },
+    "error": null
+  },
+  "index_paper-1776864159-2408.01036": {
+    "job_id": "index_paper-1776864159-2408.01036",
+    "tool": "index_paper",
+    "label": "2408.01036",
+    "state": "done",
+    "started_at": 1776864159.802125,
+    "finished_at": 1776864161.2738922,
+    "elapsed": 1.5,
+    "args": {
+      "arxiv_id": "2408.01036",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2408.01036",
+      "wing": "q-orca-implementations",
+      "final_state": "aborted",
+      "chunk_count": 0,
+      "indexed_count": 0,
+      "attempts": 2,
+      "error": "extract: Stream has ended unexpectedly"
+    },
+    "error": null
+  },
+  "index_paper-1776864159-2401.12877": {
+    "job_id": "index_paper-1776864159-2401.12877",
+    "tool": "index_paper",
+    "label": "2401.12877",
+    "state": "done",
+    "started_at": 1776864159.8365781,
+    "finished_at": 1776864226.5381482,
+    "elapsed": 66.7,
+    "args": {
+      "arxiv_id": "2401.12877",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2401.12877",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 190,
+      "indexed_count": 190,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1776864159-2511.08096": {
+    "job_id": "index_paper-1776864159-2511.08096",
+    "tool": "index_paper",
+    "label": "2511.08096",
+    "state": "done",
+    "started_at": 1776864159.853295,
+    "finished_at": 1776864192.5073988,
+    "elapsed": 32.7,
+    "args": {
+      "arxiv_id": "2511.08096",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2511.08096",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 62,
+      "indexed_count": 62,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1776864159-2504.20291": {
+    "job_id": "index_paper-1776864159-2504.20291",
+    "tool": "index_paper",
+    "label": "2504.20291",
+    "state": "done",
+    "started_at": 1776864159.869032,
+    "finished_at": 1776864197.040496,
+    "elapsed": 37.2,
+    "args": {
+      "arxiv_id": "2504.20291",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2504.20291",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 75,
+      "indexed_count": 75,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1776864159-2409.00433": {
+    "job_id": "index_paper-1776864159-2409.00433",
+    "tool": "index_paper",
+    "label": "2409.00433",
+    "state": "done",
+    "started_at": 1776864159.889034,
+    "finished_at": 1776864200.132521,
+    "elapsed": 40.2,
+    "args": {
+      "arxiv_id": "2409.00433",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2409.00433",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 89,
+      "indexed_count": 89,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1776864178-2408.01036": {
+    "job_id": "index_paper-1776864178-2408.01036",
+    "tool": "index_paper",
+    "label": "2408.01036",
+    "state": "done",
+    "started_at": 1776864178.851434,
+    "finished_at": 1776864180.341471,
+    "elapsed": 1.5,
+    "args": {
+      "arxiv_id": "2408.01036",
+      "wing": "q-orca-implementations",
+      "room": "circuits"
+    },
+    "result": {
+      "arxiv_id": "2408.01036",
+      "wing": "q-orca-implementations",
+      "final_state": "aborted",
+      "chunk_count": 0,
+      "indexed_count": 0,
+      "attempts": 2,
+      "error": "extract: Stream has ended unexpectedly"
+    },
+    "error": null
+  },
+  "crawl_site-1776865551-orca-lang-wiki": {
+    "job_id": "crawl_site-1776865551-orca-lang-wiki",
+    "tool": "crawl_site",
+    "label": "orca-lang-wiki",
+    "state": "done",
+    "started_at": 1776865551.909027,
+    "finished_at": 1776865752.981644,
+    "elapsed": 201.1,
+    "args": {
+      "site_key": "orca-lang-wiki",
+      "max_pages": 150,
+      "force": false
+    },
+    "result": {
+      "progress": {
+        "site_key": "orca-lang-wiki",
+        "queued": 32,
+        "fetched": 32,
+        "indexed": 32,
+        "skipped": 0,
+        "errors": 0,
+        "current_url": "https://deepwiki.com/jascal/orca-lang/8-glossary"
+      },
+      "site_key": "orca-lang-wiki",
+      "wing": "q-orca-implementations",
+      "room": "orca-lang"
+    },
+    "error": null
+  },
+  "crawl_site-1776865552-q-orca-lang-wiki": {
+    "job_id": "crawl_site-1776865552-q-orca-lang-wiki",
+    "tool": "crawl_site",
+    "label": "q-orca-lang-wiki",
+    "state": "done",
+    "started_at": 1776865552.00194,
+    "finished_at": 1776865764.183444,
+    "elapsed": 212.2,
+    "args": {
+      "site_key": "q-orca-lang-wiki",
+      "max_pages": 150,
+      "force": false
+    },
+    "result": {
+      "progress": {
+        "site_key": "q-orca-lang-wiki",
+        "queued": 37,
+        "fetched": 37,
+        "indexed": 37,
+        "skipped": 0,
+        "errors": 0,
+        "current_url": "https://deepwiki.com/jascal/q-orca-lang/10-glossary"
+      },
+      "site_key": "q-orca-lang-wiki",
+      "wing": "q-orca-implementations",
+      "room": "q-orca-lang"
     },
     "error": null
   }

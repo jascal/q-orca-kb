@@ -1533,5 +1533,350 @@
     "content_hash": "eede740db983d78f8aea64b27e82fb470f54b821cfe9153d91bb4446e9af3f2e",
     "indexed_at": 1776720441.419706,
     "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/q-orca-lang": {
+    "content_hash": "cbb3a9ecb93417d6fbf9fd3df243adf17359e7f3e45d3ef72730d6a6ca0841ca",
+    "indexed_at": 1776865560.813545,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/orca-lang": {
+    "content_hash": "a7ad8cd61d2d2bed0efd0c70ff2a53242614b1378362ab5e94ba23b119fb5a89",
+    "indexed_at": 1776865561.029623,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/orca-lang/1-orca-language-project-overview": {
+    "content_hash": "00a7b48ddd79400d24a2b51f6e9e4694fd6930ee5b3f5465d7542a47b460fc46",
+    "indexed_at": 1776865565.41628,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/1-q-orca-overview": {
+    "content_hash": "41bc58244114652b767684012848e5e5cf98048aaf2eed80d5f52f1728cffc88",
+    "indexed_at": 1776865565.488666,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/orca-lang/1.1-getting-started-and-configuration": {
+    "content_hash": "04086b0bd86cca82dfca6c2c0631c5195715850158f0f6ae57dd35063060f33f",
+    "indexed_at": 1776865571.082301,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/1.1-getting-started": {
+    "content_hash": "1448b0b01fd6c4c298589c7b3596e5cca1104a8aeb125340eaa5804db0c556a4",
+    "indexed_at": 1776865572.5720582,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/orca-lang/1.2-repository-structure-and-monorepo-layout": {
+    "content_hash": "2c840c5405f9ed73eb7626190c8b48482b48bfb6c1336d6cedc112139673dfe2",
+    "indexed_at": 1776865577.047458,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/1.2-q-orca-markdown-language-reference": {
+    "content_hash": "619654404379cce67aa4d7b38a549756554594c11974290cf1ce83f49992658a",
+    "indexed_at": 1776865581.353892,
+    "drawer_count": 22
+  },
+  "https://deepwiki.com/jascal/orca-lang/1.3-release-and-cicd-pipeline": {
+    "content_hash": "c179136d59e81158fb403bc27ed74ad7826c27044ab3e5b62c61ab9cf4ecb670",
+    "indexed_at": 1776865583.6006222,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/orca-lang/2-the-orca-language-(.orca.md)": {
+    "content_hash": "cd9d52779fb2be31627d2227b7d4f3f52f17123dcbc8b796e6d1cc34fb79455b",
+    "indexed_at": 1776865587.948413,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/1.3-example-machines": {
+    "content_hash": "1449e43559cb3527f0ade04adbbd3923147cc5fa75062d4fff3016bd615a2721",
+    "indexed_at": 1776865590.8035939,
+    "drawer_count": 29
+  },
+  "https://deepwiki.com/jascal/orca-lang/2.1-grammar-and-syntax-reference": {
+    "content_hash": "d2fa26cf4b2e3e8224f18cc5d2732d661b28a35e56e23516bdbbf4a84bb863cf",
+    "indexed_at": 1776865593.4469419,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/2-core-architecture": {
+    "content_hash": "c1aae7593c1c46dd6650af41ebb0bb9ad2693419f89720c3ab5bec6248f808b0",
+    "indexed_at": 1776865594.9531782,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/orca-lang/2.2-parser-and-ast": {
+    "content_hash": "bf8ce733e5edfb17379ad9b9cd163e3a9f0db2d6d705a61ee81141ca030eba02",
+    "indexed_at": 1776865598.701063,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/2.1-ast-and-data-model": {
+    "content_hash": "e01b94572c65714e48c04777ae55d78d7e42219f064b641188cba35824224152",
+    "indexed_at": 1776865600.3255858,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/orca-lang/2.3-decision-tables": {
+    "content_hash": "f9a3867990147513f0b063b27d4ee297dc04cfead87145bcf5f44be5b91aeebd",
+    "indexed_at": 1776865604.4911098,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/2.2-markdown-parser": {
+    "content_hash": "5a85591ba3617446c2647b51560c70778f879f7bbd66c7b0c40d43eb65092fdd",
+    "indexed_at": 1776865604.958283,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/orca-lang/3-compiler-and-verifier-(orca-lang)": {
+    "content_hash": "84dbbbb53f5b8a63a5020018b08d7c226609ef836260903c3aea34f5511fe88b",
+    "indexed_at": 1776865609.612104,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/2.3-angle-evaluation-and-parameterized-gates": {
+    "content_hash": "0f3bb6b34f9d2b655f93f6025970c44cfd3ec5ed66215dd74b28156316d1af3a",
+    "indexed_at": 1776865610.2026198,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3-verification-pipeline": {
+    "content_hash": "b30611525820a0aa3e4ff40499c4aea8e726664f5b2de22c5490145cec50509a",
+    "indexed_at": 1776865615.4262779,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/orca-lang/3.1-static-verifier-four-pass-analysis": {
+    "content_hash": "9b8b1fddf2a65b2a92601be1867f84d689f2e1975248b99e1926af0475f48941",
+    "indexed_at": 1776865616.246562,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/orca-lang/3.2-compiler-backends-xstate-and-mermaid": {
+    "content_hash": "f07fc26206901a7b4e7cbd808bf3521148e193d5030411ed6e5f6f41995185b7",
+    "indexed_at": 1776865620.693843,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3.1-structural-verification": {
+    "content_hash": "4f09e0b51441878e78f847772df05d19603ec88dba08028fc1d856b628b365ea",
+    "indexed_at": 1776865624.2116249,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/orca-lang/3.3-multi-machine-orchestration-and-cross-machine-verification": {
+    "content_hash": "1c18e8a11d57403642fce4319a51b37bdb51e3936efb78f86cc5d07bd2214287",
+    "indexed_at": 1776865627.311163,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3.2-completeness-and-determinism-verification": {
+    "content_hash": "49a82a68cd73681a35ba9f311cd0903f77fc4298ca83b65f61774f348f44a172",
+    "indexed_at": 1776865629.369462,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/orca-lang/4-mcp-server-and-llm-integration": {
+    "content_hash": "f96121ad0e7d773d84ebb04c0197f750c0f099d205dcae7dc062a7971fc199c7",
+    "indexed_at": 1776865633.065483,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3.3-quantum-static-verification": {
+    "content_hash": "a01a9e4e951c015d37044ccdb2f8ac8a98e15e92508e6cc4d677f1b90a4da654",
+    "indexed_at": 1776865635.553592,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/orca-lang/4.1-mcp-server-tools-and-resources": {
+    "content_hash": "d653936a0a48c36a5516cca855dd5e41460d929625b3b5b2968d2c86a66a714e",
+    "indexed_at": 1776865638.548347,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3.4-dynamic-verification": {
+    "content_hash": "0653d8f0a275e182ce5abe1296f1176efc9d69125271a2be2b69efc3ac8fde8c",
+    "indexed_at": 1776865640.336577,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/orca-lang/4.2-skills-api-and-generation-pipeline": {
+    "content_hash": "8a84b8cc746ffa489ad9434ca9c45dd5604362bcdb49971966911c45f4034510",
+    "indexed_at": 1776865644.3354251,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/3.5-superposition-leak-and-classical-context-verification": {
+    "content_hash": "ee74ab594a0b9b8937569b5408f43c7797df80eb5f9db52a2fb058f9fd08b26d",
+    "indexed_at": 1776865645.726687,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/4-compilation-backends": {
+    "content_hash": "e00b52dd931cdec76d50755457c2f50cf03a7ea60978c91655e19af4ee9bb711",
+    "indexed_at": 1776865649.791517,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/orca-lang/4.3-llm-provider-configuration": {
+    "content_hash": "293ef7acfc63b9b858beb269e744883b2824f3eaeab84b9ea52384fee3d62e02",
+    "indexed_at": 1776865652.342836,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/4.1-mermaid-compiler": {
+    "content_hash": "11d199024a11188c5e6782985b7537abd66ba06bf650a505bd7e81d250dd0a5c",
+    "indexed_at": 1776865655.204309,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/orca-lang/4.4-claude-skills-(.claudeskills)": {
+    "content_hash": "ef8933fe21485624c09a0412ef9663387e0268741155b37e5161561f27d2014b",
+    "indexed_at": 1776865660.840472,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/4.2-openqasm-3.0-compiler": {
+    "content_hash": "6a33a695b5e5ec40752c959c8cf5a92f705d0c3eacdf77e7ae4c77092a46d7d1",
+    "indexed_at": 1776865662.425496,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/orca-lang/5-runtime-implementations": {
+    "content_hash": "f6c5ed34cb604c672a09baa391cf3822d761401f4025f20ee762191a194c0af1",
+    "indexed_at": 1776865664.828979,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/4.3-qiskit-compiler": {
+    "content_hash": "ba2cf7df3c9c03032f43f98912b1b0e5291b0672635f9eb49febb16e0e8a7447",
+    "indexed_at": 1776865668.6874611,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/orca-lang/5.1-typescript-runtime-(orca-runtime-ts)": {
+    "content_hash": "1236762c63676ef7a3cb99196c2c0ca22f827ff432c985de124646860ba7fc80",
+    "indexed_at": 1776865671.385542,
+    "drawer_count": 22
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/4.4-cuda-q-compiler-and-backend": {
+    "content_hash": "a21e844aef7f4c9ee7a2e1fe0b0dcd9a47a47adff8a7698a8d9b40c0c61fa65c",
+    "indexed_at": 1776865673.18748,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/5-execution-backends-and-runtime": {
+    "content_hash": "943b0513bd20387dbf5bb7aba44b7f33e9c93b78daa06c984c3a2623078ebc3d",
+    "indexed_at": 1776865678.150024,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/orca-lang/5.2-python-runtime-(orca-runtime-python)": {
+    "content_hash": "ae0d87b2209d1931fa772190718616360abe0c21ede5082258ce581af05dd7a1",
+    "indexed_at": 1776865680.38572,
+    "drawer_count": 25
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/5.1-backend-registry-and-qutip-backend": {
+    "content_hash": "228c7468e7d4041c342870380b14d6e2168731646335d9928eb9fc81883849b8",
+    "indexed_at": 1776865683.8525,
+    "drawer_count": 20
+  },
+  "https://deepwiki.com/jascal/orca-lang/5.3-go-runtime-(orca-runtime-go)": {
+    "content_hash": "9c42f1fcc061e930a8795cfab333504f76400ee044f9be1ad4908526429f78b9",
+    "indexed_at": 1776865687.083714,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/5.2-python-runtime-and-simulation-execution": {
+    "content_hash": "c55171c872f4eaee9e217815177b84b9e2116dd6a62b1bde6f6a849e6b61f676",
+    "indexed_at": 1776865688.783194,
+    "drawer_count": 15
+  },
+  "https://deepwiki.com/jascal/orca-lang/5.4-rust-runtime-and-fortran-ffi-(orca-runtime-rust)": {
+    "content_hash": "4f036da8ea45733e162e1503f8bbd904c1d87b80e407912c2fbaf56aa44a66af",
+    "indexed_at": 1776865692.624172,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/6-skills-mcp-server-and-llm-integration": {
+    "content_hash": "333d45872485912c8e3ff92588abee73b607d40b151ac93869f0223c8f6adc7e",
+    "indexed_at": 1776865692.9811032,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/orca-lang/6-demo-applications": {
+    "content_hash": "e109b81fda32c3c8b6ef8752f49115f970e10d9f1ddbf4431a8fe49c2446e3b7",
+    "indexed_at": 1776865697.8486872,
+    "drawer_count": 11
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/6.1-skill-functions": {
+    "content_hash": "115e5f4b614159aa5da9dd63f3995e110d9079ea7d84d1ee69a5f412eff287bd",
+    "indexed_at": 1776865699.1086028,
+    "drawer_count": 16
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/6.2-mcp-server": {
+    "content_hash": "4a8b99da66448c03d9978a5981e45c891f09346f51ec334b84f531919166aff4",
+    "indexed_at": 1776865703.923659,
+    "drawer_count": 13
+  },
+  "https://deepwiki.com/jascal/orca-lang/6.1-typescript-demos-(demo-ts)": {
+    "content_hash": "e668829fbc5e912e2e97509bcfc184c48e3c160db09d20c2f247db9f09f3ab11",
+    "indexed_at": 1776865704.9057689,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/6.3-llm-provider-abstraction": {
+    "content_hash": "3014f8ced3e95ea5870214399e32310fd67053ee9e3b477de5ef00859f79b939",
+    "indexed_at": 1776865709.092139,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/orca-lang/6.2-python-demos-(demo-python-and-demo-nanolab)": {
+    "content_hash": "80b1631429bf96207b491086f89b49fe930fba465986c2ce0244e04e9f348f0f",
+    "indexed_at": 1776865711.9255328,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/7-demos-and-advanced-use-cases": {
+    "content_hash": "1d6841cc3c8c2402210927267dfc89e2432b8f5248a61b4501189dfb9e9c7c1f",
+    "indexed_at": 1776865715.018656,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/orca-lang/6.3-go-demos-(demo-go)": {
+    "content_hash": "93a361392e8119c634e3a5a0559a2799bb5c4ac161f97d6b49d81fc7cf57985f",
+    "indexed_at": 1776865718.524914,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/7.1-hybrid-quantum-controller-demo": {
+    "content_hash": "b122b8bccd3a21786781b92f770a41c2dc58b10adf2abb46686f29cca84e21fb",
+    "indexed_at": 1776865719.840595,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/orca-lang/6.4-rust-demos-and-fortran-demo": {
+    "content_hash": "5cc30fbe458e7a5b10dfa8d28d421dcfe89680a2d40146af5dfadb8409a58546",
+    "indexed_at": 1776865723.8588438,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/7.2-quantum-evolve-demo-(genetic-algorithm)": {
+    "content_hash": "05ab8ef7a1e52cc0e6bdd3cd00f2ee42bb68535e10b434e6222c09fa93ae25f6",
+    "indexed_at": 1776865724.1305459,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/7.3-grover-and-larql-gate-knn-demo": {
+    "content_hash": "af69aec9ae9801b80729d6caa87e5064d51a6e1dc47df805db46c8b3b7b3e782",
+    "indexed_at": 1776865728.35808,
+    "drawer_count": 14
+  },
+  "https://deepwiki.com/jascal/orca-lang/7-reference-documentation": {
+    "content_hash": "894439528d2a6380555d64ec183e19935a5ed23a71dd979ebd88b5162e796ab6",
+    "indexed_at": 1776865732.6693,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/8-testing-infrastructure": {
+    "content_hash": "e821b7d2a53e0bea0220533b441307e28dfcf1983d81e8d1aa6a1f9e375f7db1",
+    "indexed_at": 1776865733.549995,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/8.1-test-suite": {
+    "content_hash": "aaf58746d1894dcd57e7db2fde56395e1e8a9a74abb474bd9cfb3781c55541bd",
+    "indexed_at": 1776865739.5834801,
+    "drawer_count": 12
+  },
+  "https://deepwiki.com/jascal/orca-lang/7.1-error-catalog": {
+    "content_hash": "0568d5931a125661452238e2b0a754ca7abc8f7dd4eb4a2bcdd5899248e69924",
+    "indexed_at": 1776865740.36238,
+    "drawer_count": 17
+  },
+  "https://deepwiki.com/jascal/orca-lang/7.2-property-checking-and-bounded-model-checking": {
+    "content_hash": "66ce5706e23ec3471f5502078659f62511d67b0fbf14664f13e4a668ec8efe40",
+    "indexed_at": 1776865747.097535,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/8.2-cicd-and-automation": {
+    "content_hash": "6e005cdccb6b90e14814828e6eadac53e29c186465713c9ce2936e525417438e",
+    "indexed_at": 1776865747.3070889,
+    "drawer_count": 23
+  },
+  "https://deepwiki.com/jascal/orca-lang/8-glossary": {
+    "content_hash": "8df1548815616a5c23cbe3c9bdd0f9d71dccdedf15b5e67a38d298755bbc4138",
+    "indexed_at": 1776865752.9178429,
+    "drawer_count": 18
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/9-openspec:-feature-development-lifecycle": {
+    "content_hash": "54e87ffb55966e2f7d14e77efb5e4885b73ebdb8a702e58bfa751187a90d6c4d",
+    "indexed_at": 1776865753.343949,
+    "drawer_count": 20
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/9.1-active-feature-changes": {
+    "content_hash": "5d0db1b0e8e1634e9c444467ec0a057f2dac3fe716770bd8f8a3b32cead3acaf",
+    "indexed_at": 1776865758.8657742,
+    "drawer_count": 20
+  },
+  "https://deepwiki.com/jascal/q-orca-lang/10-glossary": {
+    "content_hash": "25d2d108d8e53ab3d20816291f5a8755290ea1d6744006b191847350892fa295",
+    "indexed_at": 1776865764.146089,
+    "drawer_count": 20
   }
 }
