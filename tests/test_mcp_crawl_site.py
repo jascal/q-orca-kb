@@ -17,7 +17,7 @@ def _call(name, arguments):
     return asyncio.run(mcp_server.call_tool(name, arguments))
 
 
-def test_list_crawl_sites_returns_all_four_keys():
+def test_list_crawl_sites_returns_all_keys():
     out = _call("list_crawl_sites", {})
     keys = {s["site_key"] for s in out["sites"]}
     assert keys == {
@@ -25,6 +25,8 @@ def test_list_crawl_sites_returns_all_four_keys():
         "ibm-quantum-learning",
         "msft-azure-quantum",
         "nvidia-cudaqx",
+        "orca-lang-wiki",
+        "q-orca-lang-wiki",
     }
     for s in out["sites"]:
         assert s["wing"]
