@@ -1,230 +1,735 @@
 {
-  "crawl_site-1776728774-ibm-quantum-docs": {
-    "job_id": "crawl_site-1776728774-ibm-quantum-docs",
-    "tool": "crawl_site",
-    "label": "ibm-quantum-docs",
-    "state": "done",
-    "started_at": 1776728774.2288342,
-    "finished_at": 1776728774.230264,
-    "elapsed": 0.0,
-    "args": {
-      "site_key": "ibm-quantum-docs",
-      "max_pages": 1,
-      "force": false
-    },
-    "result": {
-      "progress": {
-        "site_key": "ibm-quantum-docs",
-        "queued": 0,
-        "fetched": 0,
-        "indexed": 0,
-        "skipped": 0,
-        "errors": 0,
-        "current_url": ""
-      },
-      "site_key": "ibm-quantum-docs"
-    },
-    "error": null
-  },
-  "index_paper-1776864159-2408.01036": {
-    "job_id": "index_paper-1776864159-2408.01036",
+  "index_paper-1776946283-1610.06546": {
+    "job_id": "index_paper-1776946283-1610.06546",
     "tool": "index_paper",
-    "label": "2408.01036",
+    "label": "1610.06546",
     "state": "done",
-    "started_at": 1776864159.802125,
-    "finished_at": 1776864161.2738922,
-    "elapsed": 1.5,
+    "started_at": 1776946283.716179,
+    "finished_at": 1776946335.880196,
+    "elapsed": 52.2,
     "args": {
-      "arxiv_id": "2408.01036",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
+      "arxiv_id": "1610.06546",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "arxiv_id": "2408.01036",
-      "wing": "q-orca-implementations",
-      "final_state": "aborted",
-      "chunk_count": 0,
-      "indexed_count": 0,
-      "attempts": 2,
-      "error": "extract: Stream has ended unexpectedly"
-    },
-    "error": null
-  },
-  "index_paper-1776864159-2401.12877": {
-    "job_id": "index_paper-1776864159-2401.12877",
-    "tool": "index_paper",
-    "label": "2401.12877",
-    "state": "done",
-    "started_at": 1776864159.8365781,
-    "finished_at": 1776864226.5381482,
-    "elapsed": 66.7,
-    "args": {
-      "arxiv_id": "2401.12877",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
-    },
-    "result": {
-      "arxiv_id": "2401.12877",
-      "wing": "q-orca-implementations",
+      "arxiv_id": "1610.06546",
+      "wing": "q-orca-physics",
       "final_state": "done",
-      "chunk_count": 190,
-      "indexed_count": 190,
+      "chunk_count": 114,
+      "indexed_count": 114,
       "attempts": 0,
       "error": ""
     },
     "error": null
   },
-  "index_paper-1776864159-2511.08096": {
-    "job_id": "index_paper-1776864159-2511.08096",
+  "index_paper-1776946284-quant-ph/0508139": {
+    "job_id": "index_paper-1776946284-quant-ph/0508139",
     "tool": "index_paper",
-    "label": "2511.08096",
+    "label": "quant-ph/0508139",
     "state": "done",
-    "started_at": 1776864159.853295,
-    "finished_at": 1776864192.5073988,
-    "elapsed": 32.7,
+    "started_at": 1776946284.056323,
+    "finished_at": 1776946315.339205,
+    "elapsed": 31.3,
     "args": {
-      "arxiv_id": "2511.08096",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
+      "arxiv_id": "quant-ph/0508139",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "arxiv_id": "2511.08096",
-      "wing": "q-orca-implementations",
+      "arxiv_id": "quant-ph/0508139",
+      "wing": "q-orca-physics",
       "final_state": "done",
-      "chunk_count": 62,
-      "indexed_count": 62,
+      "chunk_count": 55,
+      "indexed_count": 55,
       "attempts": 0,
       "error": ""
     },
     "error": null
   },
-  "index_paper-1776864159-2504.20291": {
-    "job_id": "index_paper-1776864159-2504.20291",
+  "index_paper-1776946284-2310.13296": {
+    "job_id": "index_paper-1776946284-2310.13296",
     "tool": "index_paper",
-    "label": "2504.20291",
+    "label": "2310.13296",
     "state": "done",
-    "started_at": 1776864159.869032,
-    "finished_at": 1776864197.040496,
-    "elapsed": 37.2,
+    "started_at": 1776946284.8090181,
+    "finished_at": 1776946301.205102,
+    "elapsed": 16.4,
     "args": {
-      "arxiv_id": "2504.20291",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
+      "arxiv_id": "2310.13296",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "arxiv_id": "2504.20291",
-      "wing": "q-orca-implementations",
+      "arxiv_id": "2310.13296",
+      "wing": "q-orca-physics",
       "final_state": "done",
-      "chunk_count": 75,
-      "indexed_count": 75,
+      "chunk_count": 23,
+      "indexed_count": 23,
       "attempts": 0,
       "error": ""
     },
     "error": null
   },
-  "index_paper-1776864159-2409.00433": {
-    "job_id": "index_paper-1776864159-2409.00433",
+  "index_paper-1776946285-2410.03059": {
+    "job_id": "index_paper-1776946285-2410.03059",
     "tool": "index_paper",
-    "label": "2409.00433",
+    "label": "2410.03059",
     "state": "done",
-    "started_at": 1776864159.889034,
-    "finished_at": 1776864200.132521,
-    "elapsed": 40.2,
+    "started_at": 1776946285.6058009,
+    "finished_at": 1776946327.5675788,
+    "elapsed": 42.0,
     "args": {
-      "arxiv_id": "2409.00433",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
+      "arxiv_id": "2410.03059",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "arxiv_id": "2409.00433",
-      "wing": "q-orca-implementations",
+      "arxiv_id": "2410.03059",
+      "wing": "q-orca-physics",
       "final_state": "done",
-      "chunk_count": 89,
-      "indexed_count": 89,
+      "chunk_count": 78,
+      "indexed_count": 78,
       "attempts": 0,
       "error": ""
     },
     "error": null
   },
-  "index_paper-1776864178-2408.01036": {
-    "job_id": "index_paper-1776864178-2408.01036",
+  "index_paper-1776946286-2403.08729": {
+    "job_id": "index_paper-1776946286-2403.08729",
     "tool": "index_paper",
-    "label": "2408.01036",
+    "label": "2403.08729",
     "state": "done",
-    "started_at": 1776864178.851434,
-    "finished_at": 1776864180.341471,
-    "elapsed": 1.5,
+    "started_at": 1776946286.013168,
+    "finished_at": 1776946351.127434,
+    "elapsed": 65.1,
     "args": {
-      "arxiv_id": "2408.01036",
-      "wing": "q-orca-implementations",
-      "room": "circuits"
+      "arxiv_id": "2403.08729",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "arxiv_id": "2408.01036",
-      "wing": "q-orca-implementations",
-      "final_state": "aborted",
-      "chunk_count": 0,
-      "indexed_count": 0,
-      "attempts": 2,
-      "error": "extract: Stream has ended unexpectedly"
+      "arxiv_id": "2403.08729",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 171,
+      "indexed_count": 171,
+      "attempts": 0,
+      "error": ""
     },
     "error": null
   },
-  "crawl_site-1776865551-orca-lang-wiki": {
-    "job_id": "crawl_site-1776865551-orca-lang-wiki",
-    "tool": "crawl_site",
-    "label": "orca-lang-wiki",
+  "index_paper-1776946286-2504.07214": {
+    "job_id": "index_paper-1776946286-2504.07214",
+    "tool": "index_paper",
+    "label": "2504.07214",
     "state": "done",
-    "started_at": 1776865551.909027,
-    "finished_at": 1776865752.981644,
-    "elapsed": 201.1,
+    "started_at": 1776946286.460809,
+    "finished_at": 1776946340.6380858,
+    "elapsed": 54.2,
     "args": {
-      "site_key": "orca-lang-wiki",
-      "max_pages": 150,
-      "force": false
+      "arxiv_id": "2504.07214",
+      "wing": "q-orca-physics",
+      "room": "simulation"
     },
     "result": {
-      "progress": {
-        "site_key": "orca-lang-wiki",
-        "queued": 32,
-        "fetched": 32,
-        "indexed": 32,
-        "skipped": 0,
-        "errors": 0,
-        "current_url": "https://deepwiki.com/jascal/orca-lang/8-glossary"
-      },
-      "site_key": "orca-lang-wiki",
-      "wing": "q-orca-implementations",
-      "room": "orca-lang"
+      "arxiv_id": "2504.07214",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 117,
+      "indexed_count": 117,
+      "attempts": 0,
+      "error": ""
     },
     "error": null
   },
-  "crawl_site-1776865552-q-orca-lang-wiki": {
-    "job_id": "crawl_site-1776865552-q-orca-lang-wiki",
-    "tool": "crawl_site",
-    "label": "q-orca-lang-wiki",
+  "index_paper-1777032700-1109.1473": {
+    "job_id": "index_paper-1777032700-1109.1473",
+    "tool": "index_paper",
+    "label": "1109.1473",
     "state": "done",
-    "started_at": 1776865552.00194,
-    "finished_at": 1776865764.183444,
-    "elapsed": 212.2,
+    "started_at": 1777032700.437212,
+    "finished_at": 1777032728.436042,
+    "elapsed": 28.0,
     "args": {
-      "site_key": "q-orca-lang-wiki",
-      "max_pages": 150,
-      "force": false
+      "arxiv_id": "1109.1473",
+      "wing": "q-orca-implementations",
+      "room": "cryptography"
     },
     "result": {
-      "progress": {
-        "site_key": "q-orca-lang-wiki",
-        "queued": 37,
-        "fetched": 37,
-        "indexed": 37,
-        "skipped": 0,
-        "errors": 0,
-        "current_url": "https://deepwiki.com/jascal/q-orca-lang/10-glossary"
-      },
-      "site_key": "q-orca-lang-wiki",
+      "arxiv_id": "1109.1473",
       "wing": "q-orca-implementations",
-      "room": "q-orca-lang"
+      "final_state": "done",
+      "chunk_count": 56,
+      "indexed_count": 56,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777032700-1904.07074": {
+    "job_id": "index_paper-1777032700-1904.07074",
+    "tool": "index_paper",
+    "label": "1904.07074",
+    "state": "done",
+    "started_at": 1777032700.839728,
+    "finished_at": 1777032726.441566,
+    "elapsed": 25.6,
+    "args": {
+      "arxiv_id": "1904.07074",
+      "wing": "q-orca-implementations",
+      "room": "cryptography"
+    },
+    "result": {
+      "arxiv_id": "1904.07074",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 51,
+      "indexed_count": 51,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777032701-2510.26320": {
+    "job_id": "index_paper-1777032701-2510.26320",
+    "tool": "index_paper",
+    "label": "2510.26320",
+    "state": "done",
+    "started_at": 1777032701.222385,
+    "finished_at": 1777032785.157401,
+    "elapsed": 83.9,
+    "args": {
+      "arxiv_id": "2510.26320",
+      "wing": "q-orca-implementations",
+      "room": "cryptography"
+    },
+    "result": {
+      "arxiv_id": "2510.26320",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 263,
+      "indexed_count": 263,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777032702-2512.01758": {
+    "job_id": "index_paper-1777032702-2512.01758",
+    "tool": "index_paper",
+    "label": "2512.01758",
+    "state": "done",
+    "started_at": 1777032702.024513,
+    "finished_at": 1777032788.624015,
+    "elapsed": 86.6,
+    "args": {
+      "arxiv_id": "2512.01758",
+      "wing": "q-orca-implementations",
+      "room": "cryptography"
+    },
+    "result": {
+      "arxiv_id": "2512.01758",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 274,
+      "indexed_count": 274,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777032702-2110.09262": {
+    "job_id": "index_paper-1777032702-2110.09262",
+    "tool": "index_paper",
+    "label": "2110.09262",
+    "state": "done",
+    "started_at": 1777032702.42574,
+    "finished_at": 1777032745.142333,
+    "elapsed": 42.7,
+    "args": {
+      "arxiv_id": "2110.09262",
+      "wing": "q-orca-implementations",
+      "room": "cryptography"
+    },
+    "result": {
+      "arxiv_id": "2110.09262",
+      "wing": "q-orca-implementations",
+      "final_state": "done",
+      "chunk_count": 100,
+      "indexed_count": 100,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777119098-0906.4586": {
+    "job_id": "index_paper-1777119098-0906.4586",
+    "tool": "index_paper",
+    "label": "0906.4586",
+    "state": "done",
+    "started_at": 1777119098.029687,
+    "finished_at": 1777119157.808359,
+    "elapsed": 59.8,
+    "args": {
+      "arxiv_id": "0906.4586",
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "arxiv_id": "0906.4586",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 126,
+      "indexed_count": 126,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777119098-1802.03188": {
+    "job_id": "index_paper-1777119098-1802.03188",
+    "tool": "index_paper",
+    "label": "1802.03188",
+    "state": "done",
+    "started_at": 1777119098.5687501,
+    "finished_at": 1777119232.803288,
+    "elapsed": 134.2,
+    "args": {
+      "arxiv_id": "1802.03188",
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "arxiv_id": "1802.03188",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 418,
+      "indexed_count": 418,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777119099-2412.09869": {
+    "job_id": "index_paper-1777119099-2412.09869",
+    "tool": "index_paper",
+    "label": "2412.09869",
+    "state": "done",
+    "started_at": 1777119099.623303,
+    "finished_at": 1777119180.3101702,
+    "elapsed": 80.7,
+    "args": {
+      "arxiv_id": "2412.09869",
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "arxiv_id": "2412.09869",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 185,
+      "indexed_count": 185,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777119100-2411.10835": {
+    "job_id": "index_paper-1777119100-2411.10835",
+    "tool": "index_paper",
+    "label": "2411.10835",
+    "state": "done",
+    "started_at": 1777119100.513134,
+    "finished_at": 1777119209.07074,
+    "elapsed": 108.6,
+    "args": {
+      "arxiv_id": "2411.10835",
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "arxiv_id": "2411.10835",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 299,
+      "indexed_count": 299,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "index_paper-1777119100-2311.11571": {
+    "job_id": "index_paper-1777119100-2311.11571",
+    "tool": "index_paper",
+    "label": "2311.11571",
+    "state": "done",
+    "started_at": 1777119100.837777,
+    "finished_at": 1777119173.253292,
+    "elapsed": 72.4,
+    "args": {
+      "arxiv_id": "2311.11571",
+      "wing": "q-orca-physics",
+      "room": "formal-methods"
+    },
+    "result": {
+      "arxiv_id": "2311.11571",
+      "wing": "q-orca-physics",
+      "final_state": "done",
+      "chunk_count": 156,
+      "indexed_count": 156,
+      "attempts": 0,
+      "error": ""
+    },
+    "error": null
+  },
+  "batch_index-1777255799-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777255799-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/quantum-process-algebra",
+    "state": "done",
+    "started_at": 1777255799.072265,
+    "finished_at": 1777255978.2241979,
+    "elapsed": 179.2,
+    "args": {
+      "arxiv_ids": [
+        "1007.2584",
+        "0707.0330",
+        "1201.0416",
+        "1202.3484",
+        "1311.2960"
+      ],
+      "wing": "q-orca-physics",
+      "room": "quantum-process-algebra"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1007.2584",
+          "state": "done",
+          "indexed_count": 180,
+          "error": ""
+        },
+        {
+          "arxiv_id": "0707.0330",
+          "state": "done",
+          "indexed_count": 175,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1201.0416",
+          "state": "done",
+          "indexed_count": 116,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1202.3484",
+          "state": "done",
+          "indexed_count": 136,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1311.2960",
+          "state": "done",
+          "indexed_count": 139,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1777292044-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777292044-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/error-correction",
+    "state": "done",
+    "started_at": 1777292044.271847,
+    "finished_at": 1777292200.5804281,
+    "elapsed": 156.3,
+    "args": {
+      "arxiv_ids": [
+        "0904.2557",
+        "2207.09479",
+        "2012.04068",
+        "2202.13641",
+        "1708.02246"
+      ],
+      "wing": "q-orca-physics",
+      "room": "error-correction"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "0904.2557",
+          "state": "done",
+          "indexed_count": 214,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2207.09479",
+          "state": "done",
+          "indexed_count": 103,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2012.04068",
+          "state": "done",
+          "indexed_count": 137,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2202.13641",
+          "state": "done",
+          "indexed_count": 152,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1708.02246",
+          "state": "done",
+          "indexed_count": 184,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1777378308-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777378308-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/oracle-algorithms",
+    "state": "done",
+    "started_at": 1777378308.7302132,
+    "finished_at": 1777378417.657772,
+    "elapsed": 108.9,
+    "args": {
+      "arxiv_ids": [
+        "quant-ph/9605043",
+        "quant-ph/0005055",
+        "1511.04206",
+        "quant-ph/0002066",
+        "1806.01838"
+      ],
+      "wing": "q-orca-physics",
+      "room": "oracle-algorithms"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "quant-ph/9605043",
+          "state": "done",
+          "indexed_count": 49,
+          "error": ""
+        },
+        {
+          "arxiv_id": "quant-ph/0005055",
+          "state": "done",
+          "indexed_count": 92,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1511.04206",
+          "state": "done",
+          "indexed_count": 88,
+          "error": ""
+        },
+        {
+          "arxiv_id": "quant-ph/0002066",
+          "state": "done",
+          "indexed_count": 59,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1806.01838",
+          "state": "done",
+          "indexed_count": 266,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1777464746-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777464746-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/vqe",
+    "state": "done",
+    "started_at": 1777464746.7319622,
+    "finished_at": 1777465254.423821,
+    "elapsed": 507.7,
+    "args": {
+      "arxiv_ids": [
+        "1802.00171",
+        "1512.06860",
+        "2111.05176",
+        "1812.11173",
+        "1803.11173"
+      ],
+      "wing": "q-orca-physics",
+      "room": "vqe"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1802.00171",
+          "state": "done",
+          "indexed_count": 57,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1512.06860",
+          "state": "done",
+          "indexed_count": 91,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2111.05176",
+          "state": "done",
+          "indexed_count": 1043,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1812.11173",
+          "state": "done",
+          "indexed_count": 79,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1803.11173",
+          "state": "done",
+          "indexed_count": 48,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1777551160-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777551160-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/quantum-walks",
+    "state": "error",
+    "started_at": 1777551160.737487,
+    "finished_at": 1777551212.297085,
+    "elapsed": 51.6,
+    "args": {
+      "arxiv_ids": [
+        "quant-ph/9706062",
+        "quant-ph/0304064",
+        "quant-ph/0507012",
+        "1303.1995",
+        "1806.02030"
+      ],
+      "wing": "q-orca-physics",
+      "room": "quantum-walks"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "quant-ph/9706062",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "quant-ph/0304064",
+          "state": "done",
+          "indexed_count": 72,
+          "error": ""
+        },
+        {
+          "arxiv_id": "quant-ph/0507012",
+          "state": "done",
+          "indexed_count": 76,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1303.1995",
+          "state": "done",
+          "indexed_count": 38,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1806.02030",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 3,
+      "total": 5
+    },
+    "error": "2 paper(s) failed"
+  },
+  "batch_index-1777551296-2-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777551296-2-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "2-papers-q-orca-physics/quantum-walks",
+    "state": "error",
+    "started_at": 1777551296.3491971,
+    "finished_at": 1777551315.0380318,
+    "elapsed": 18.7,
+    "args": {
+      "arxiv_ids": [
+        "quant-ph/9706062",
+        "1806.02030"
+      ],
+      "wing": "q-orca-physics",
+      "room": "quantum-walks"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "quant-ph/9706062",
+          "state": "done",
+          "indexed_count": 96,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1806.02030",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 1,
+      "total": 2
+    },
+    "error": "1 paper(s) failed"
+  },
+  "batch_index-1777551386-1-papers-q-orca-physics/": {
+    "job_id": "batch_index-1777551386-1-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "1-papers-q-orca-physics/quantum-walks",
+    "state": "done",
+    "started_at": 1777551386.044415,
+    "finished_at": 1777551391.0900228,
+    "elapsed": 5.0,
+    "args": {
+      "arxiv_ids": [
+        "quant-ph/0404092"
+      ],
+      "wing": "q-orca-physics",
+      "room": "quantum-walks"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "quant-ph/0404092",
+          "state": "done",
+          "indexed_count": 23,
+          "error": ""
+        }
+      ],
+      "done": 1,
+      "total": 1
     },
     "error": null
   }
