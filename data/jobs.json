@@ -920,5 +920,296 @@
       "total": 5
     },
     "error": "1 paper(s) failed"
+  },
+  "index_paper-1778204397-2209.10652": {
+    "job_id": "index_paper-1778204397-2209.10652",
+    "tool": "index_paper",
+    "label": "2209.10652",
+    "state": "done",
+    "started_at": 1778204397.059177,
+    "finished_at": 1778204467.312107,
+    "elapsed": 70.3,
+    "args": {
+      "arxiv_id": "2209.10652",
+      "wing": "q-orca-physics",
+      "room": "llm-interpretability"
+    },
+    "result": {
+      "arxiv_id": "2209.10652",
+      "wing": "q-orca-physics",
+      "final_state": "aborted",
+      "chunk_count": 0,
+      "indexed_count": 0,
+      "attempts": 2,
+      "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+    },
+    "error": null
+  },
+  "index_paper-1778204511-2209.10652": {
+    "job_id": "index_paper-1778204511-2209.10652",
+    "tool": "index_paper",
+    "label": "2209.10652",
+    "state": "done",
+    "started_at": 1778204511.1871948,
+    "finished_at": 1778204678.699071,
+    "elapsed": 167.5,
+    "args": {
+      "arxiv_id": "2209.10652",
+      "wing": "q-orca-physics",
+      "room": "llm-interpretability"
+    },
+    "result": {
+      "arxiv_id": "2209.10652",
+      "wing": "q-orca-physics",
+      "final_state": "aborted",
+      "chunk_count": 0,
+      "indexed_count": 0,
+      "attempts": 2,
+      "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+    },
+    "error": null
+  },
+  "batch_index-1778242414-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1778242414-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/zx-calculus",
+    "state": "error",
+    "started_at": 1778242414.5063,
+    "finished_at": 1778242899.6730828,
+    "elapsed": 485.2,
+    "args": {
+      "arxiv_ids": [
+        "1903.06035",
+        "1805.02175",
+        "2303.03163",
+        "2303.08829",
+        "1704.08670"
+      ],
+      "wing": "q-orca-physics",
+      "room": "zx-calculus"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1903.06035",
+          "state": "done",
+          "indexed_count": 164,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.02175",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1805.02175&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2303.03163",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2303.03163&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2303.08829",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2303.08829&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "1704.08670",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1704.08670&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        }
+      ],
+      "done": 1,
+      "total": 5
+    },
+    "error": "4 paper(s) failed"
+  },
+  "batch_index-1778328812-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1778328812-5-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-implementations/llm-proof-synthesis",
+    "state": "error",
+    "started_at": 1778328812.790561,
+    "finished_at": 1778328869.937407,
+    "elapsed": 57.1,
+    "args": {
+      "arxiv_ids": [
+        "2404.12534",
+        "2310.04353",
+        "2502.04671",
+        "2502.17925",
+        "2503.04772"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "llm-proof-synthesis"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2404.12534",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "2310.04353",
+          "state": "done",
+          "indexed_count": 122,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2502.04671",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "2502.17925",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2503.04772",
+          "state": "done",
+          "indexed_count": 61,
+          "error": ""
+        }
+      ],
+      "done": 2,
+      "total": 5
+    },
+    "error": "3 paper(s) failed"
+  },
+  "batch_index-1778328880-3-papers-q-orca-implemen": {
+    "job_id": "batch_index-1778328880-3-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-implementations/llm-proof-synthesis",
+    "state": "error",
+    "started_at": 1778328880.437341,
+    "finished_at": 1778328918.398968,
+    "elapsed": 38.0,
+    "args": {
+      "arxiv_ids": [
+        "2404.12534",
+        "2502.04671",
+        "2502.17925"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "llm-proof-synthesis"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2404.12534",
+          "state": "done",
+          "indexed_count": 115,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2502.04671",
+          "state": "done",
+          "indexed_count": 88,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2502.17925",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 2,
+      "total": 3
+    },
+    "error": "1 paper(s) failed"
+  },
+  "batch_index-1778328926-1-papers-q-orca-implemen": {
+    "job_id": "batch_index-1778328926-1-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "1-papers-q-orca-implementations/llm-proof-synthesis",
+    "state": "error",
+    "started_at": 1778328926.150699,
+    "finished_at": 1778328926.5798762,
+    "elapsed": 0.4,
+    "args": {
+      "arxiv_ids": [
+        "2502.17925"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "llm-proof-synthesis"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2502.17925",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "1 paper(s) failed"
+  },
+  "batch_index-1778415230-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1778415230-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/zx-calculus",
+    "state": "error",
+    "started_at": 1778415230.9752011,
+    "finished_at": 1778415318.2902799,
+    "elapsed": 87.3,
+    "args": {
+      "arxiv_ids": [
+        "2012.13966",
+        "1904.04735",
+        "2303.08829",
+        "1704.08670",
+        "2204.14038"
+      ],
+      "wing": "q-orca-physics",
+      "room": "zx-calculus"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2012.13966",
+          "state": "done",
+          "indexed_count": 361,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1904.04735",
+          "state": "done",
+          "indexed_count": 58,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2303.08829",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "1704.08670",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2204.14038",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        }
+      ],
+      "done": 2,
+      "total": 5
+    },
+    "error": "3 paper(s) failed"
   }
 }
