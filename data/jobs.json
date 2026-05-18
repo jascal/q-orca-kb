@@ -977,5 +977,62 @@
       "total": 5
     },
     "error": null
+  },
+  "batch_index-1778847227-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1778847227-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/verified-compilation",
+    "state": "error",
+    "started_at": 1778847227.706066,
+    "finished_at": 1778847658.0729148,
+    "elapsed": 430.4,
+    "args": {
+      "arxiv_ids": [
+        "1901.10118",
+        "1908.08963",
+        "2010.01240",
+        "2205.00661",
+        "2205.02287"
+      ],
+      "wing": "q-orca-physics",
+      "room": "verified-compilation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1901.10118",
+          "state": "done",
+          "indexed_count": 67,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1908.08963",
+          "state": "done",
+          "indexed_count": 86,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2010.01240",
+          "state": "done",
+          "indexed_count": 110,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2205.00661",
+          "state": "done",
+          "indexed_count": 124,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2205.02287",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2205.02287&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        }
+      ],
+      "done": 4,
+      "total": 5
+    },
+    "error": "1 paper(s) failed"
   }
 }
