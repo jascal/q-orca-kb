@@ -1,430 +1,54 @@
 {
-  "batch_index-1778015844-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778015844-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/circuits",
-    "state": "error",
-    "started_at": 1778015844.488668,
-    "finished_at": 1778016345.417624,
-    "elapsed": 500.9,
-    "args": {
-      "arxiv_ids": [
-        "1905.10876",
-        "1810.03787",
-        "2012.11242",
-        "1906.07682",
-        "2012.09265"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "circuits"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1905.10876",
-          "state": "done",
-          "indexed_count": 116,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1810.03787",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "2012.11242",
-          "state": "done",
-          "indexed_count": 55,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1906.07682",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1906.07682&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2012.09265",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2012.09265&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 2,
-      "total": 5
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778016039-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778016039-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/llm-interpretability",
-    "state": "error",
-    "started_at": 1778016039.505308,
-    "finished_at": 1778016418.398591,
-    "elapsed": 378.9,
-    "args": {
-      "arxiv_ids": [
-        "2209.10652",
-        "2309.08600",
-        "2211.00593",
-        "2304.14997",
-        "2406.04093"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2209.10652",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: <urlopen error retrieval incomplete: got only 4194304 out of 4919189 bytes>"
-        },
-        {
-          "arxiv_id": "2309.08600",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2309.08600&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2211.00593",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2211.00593&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2304.14997",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2304.14997&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2406.04093",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2406.04093&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 0,
-      "total": 5
-    },
-    "error": "5 paper(s) failed"
-  },
-  "batch_index-1778069576-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778069576-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/azure-quantum",
-    "state": "error",
-    "started_at": 1778069576.9614139,
-    "finished_at": 1778069661.201226,
-    "elapsed": 84.2,
-    "args": {
-      "arxiv_ids": [
-        "1803.00652",
-        "2206.03532",
-        "2311.05801",
-        "2502.12252",
-        "2601.09943"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "azure-quantum"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1803.00652",
-          "state": "done",
-          "indexed_count": 76,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2206.03532",
-          "state": "done",
-          "indexed_count": 101,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2311.05801",
-          "state": "done",
-          "indexed_count": 42,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2502.12252",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2601.09943",
-          "state": "done",
-          "indexed_count": 102,
-          "error": ""
-        }
-      ],
-      "done": 4,
-      "total": 5
-    },
-    "error": "1 paper(s) failed"
-  },
-  "batch_index-1778156015-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778156015-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/dirac-decision",
-    "state": "done",
-    "started_at": 1778156015.806141,
-    "finished_at": 1778156250.104936,
-    "elapsed": 234.3,
-    "args": {
-      "arxiv_ids": [
-        "2211.06411",
-        "2412.19463",
-        "2512.22383",
-        "1901.05184",
-        "2212.02267"
-      ],
-      "wing": "q-orca-physics",
-      "room": "dirac-decision"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2211.06411",
-          "state": "done",
-          "indexed_count": 269,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2412.19463",
-          "state": "done",
-          "indexed_count": 231,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2512.22383",
-          "state": "done",
-          "indexed_count": 120,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1901.05184",
-          "state": "done",
-          "indexed_count": 323,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2212.02267",
-          "state": "done",
-          "indexed_count": 121,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1778156602-3-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778156602-3-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-physics/vqe",
-    "state": "done",
-    "started_at": 1778156602.451587,
-    "finished_at": 1778156715.952841,
-    "elapsed": 113.5,
-    "args": {
-      "arxiv_ids": [
-        "1810.03787",
-        "1906.07682",
-        "2012.09265"
-      ],
-      "wing": "q-orca-physics",
-      "room": "vqe"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1810.03787",
-          "state": "done",
-          "indexed_count": 81,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1906.07682",
-          "state": "done",
-          "indexed_count": 136,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2012.09265",
-          "state": "done",
-          "indexed_count": 259,
-          "error": ""
-        }
-      ],
-      "done": 3,
-      "total": 3
-    },
-    "error": null
-  },
-  "batch_index-1778160317-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778160317-5-papers-q-orca-physics/",
+  "batch_index-1779936699-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1779936699-5-papers-q-orca-physics/",
     "tool": "batch_index",
     "label": "5-papers-q-orca-physics/llm-interpretability",
     "state": "error",
-    "started_at": 1778160317.8914292,
-    "finished_at": 1778160421.7158191,
-    "elapsed": 103.8,
+    "started_at": 1779936699.854636,
+    "finished_at": 1779937293.040722,
+    "elapsed": 593.2,
     "args": {
       "arxiv_ids": [
+        "2310.01405",
         "2209.10652",
-        "2309.08600",
-        "2211.00593",
-        "2304.14997",
-        "2406.04093"
+        "2201.02177",
+        "2301.05217",
+        "2210.13382"
       ],
       "wing": "q-orca-physics",
       "room": "llm-interpretability"
     },
     "result": {
       "papers": [
+        {
+          "arxiv_id": "2310.01405",
+          "state": "done",
+          "indexed_count": 280,
+          "error": ""
+        },
         {
           "arxiv_id": "2209.10652",
           "state": "aborted",
           "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
         },
         {
-          "arxiv_id": "2309.08600",
-          "state": "done",
-          "indexed_count": 80,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2211.00593",
-          "state": "done",
-          "indexed_count": 126,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2304.14997",
-          "state": "done",
-          "indexed_count": 169,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2406.04093",
-          "state": "done",
-          "indexed_count": 141,
-          "error": ""
-        }
-      ],
-      "done": 4,
-      "total": 5
-    },
-    "error": "1 paper(s) failed"
-  },
-  "index_paper-1778204397-2209.10652": {
-    "job_id": "index_paper-1778204397-2209.10652",
-    "tool": "index_paper",
-    "label": "2209.10652",
-    "state": "done",
-    "started_at": 1778204397.059177,
-    "finished_at": 1778204467.312107,
-    "elapsed": 70.3,
-    "args": {
-      "arxiv_id": "2209.10652",
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "arxiv_id": "2209.10652",
-      "wing": "q-orca-physics",
-      "final_state": "aborted",
-      "chunk_count": 0,
-      "indexed_count": 0,
-      "attempts": 2,
-      "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-    },
-    "error": null
-  },
-  "index_paper-1778204511-2209.10652": {
-    "job_id": "index_paper-1778204511-2209.10652",
-    "tool": "index_paper",
-    "label": "2209.10652",
-    "state": "done",
-    "started_at": 1778204511.1871948,
-    "finished_at": 1778204678.699071,
-    "elapsed": 167.5,
-    "args": {
-      "arxiv_id": "2209.10652",
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "arxiv_id": "2209.10652",
-      "wing": "q-orca-physics",
-      "final_state": "aborted",
-      "chunk_count": 0,
-      "indexed_count": 0,
-      "attempts": 2,
-      "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-    },
-    "error": null
-  },
-  "batch_index-1778242414-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778242414-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/zx-calculus",
-    "state": "error",
-    "started_at": 1778242414.5063,
-    "finished_at": 1778242899.6730828,
-    "elapsed": 485.2,
-    "args": {
-      "arxiv_ids": [
-        "1903.06035",
-        "1805.02175",
-        "2303.03163",
-        "2303.08829",
-        "1704.08670"
-      ],
-      "wing": "q-orca-physics",
-      "room": "zx-calculus"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1903.06035",
-          "state": "done",
-          "indexed_count": 164,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1805.02175",
+          "arxiv_id": "2201.02177",
           "state": "aborted",
           "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1805.02175&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2201.02177&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
         },
         {
-          "arxiv_id": "2303.03163",
+          "arxiv_id": "2301.05217",
           "state": "aborted",
           "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2303.03163&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2301.05217&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
         },
         {
-          "arxiv_id": "2303.08829",
+          "arxiv_id": "2210.13382",
           "state": "aborted",
           "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2303.08829&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1704.08670",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1704.08670&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2210.13382&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
         }
       ],
       "done": 1,
@@ -432,544 +56,55 @@
     },
     "error": "4 paper(s) failed"
   },
-  "batch_index-1778328812-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778328812-5-papers-q-orca-implemen",
+  "batch_index-1779970396-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1779970396-5-papers-q-orca-implemen",
     "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/llm-proof-synthesis",
-    "state": "error",
-    "started_at": 1778328812.790561,
-    "finished_at": 1778328869.937407,
-    "elapsed": 57.1,
-    "args": {
-      "arxiv_ids": [
-        "2404.12534",
-        "2310.04353",
-        "2502.04671",
-        "2502.17925",
-        "2503.04772"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "llm-proof-synthesis"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2404.12534",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "2310.04353",
-          "state": "done",
-          "indexed_count": 122,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2502.04671",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "2502.17925",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2503.04772",
-          "state": "done",
-          "indexed_count": 61,
-          "error": ""
-        }
-      ],
-      "done": 2,
-      "total": 5
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778328880-3-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778328880-3-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-implementations/llm-proof-synthesis",
-    "state": "error",
-    "started_at": 1778328880.437341,
-    "finished_at": 1778328918.398968,
-    "elapsed": 38.0,
-    "args": {
-      "arxiv_ids": [
-        "2404.12534",
-        "2502.04671",
-        "2502.17925"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "llm-proof-synthesis"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2404.12534",
-          "state": "done",
-          "indexed_count": 115,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2502.04671",
-          "state": "done",
-          "indexed_count": 88,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2502.17925",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 2,
-      "total": 3
-    },
-    "error": "1 paper(s) failed"
-  },
-  "batch_index-1778328926-1-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778328926-1-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "1-papers-q-orca-implementations/llm-proof-synthesis",
-    "state": "error",
-    "started_at": 1778328926.150699,
-    "finished_at": 1778328926.5798762,
-    "elapsed": 0.4,
-    "args": {
-      "arxiv_ids": [
-        "2502.17925"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "llm-proof-synthesis"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2502.17925",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 0,
-      "total": 1
-    },
-    "error": "1 paper(s) failed"
-  },
-  "batch_index-1778415230-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778415230-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/zx-calculus",
-    "state": "error",
-    "started_at": 1778415230.9752011,
-    "finished_at": 1778415318.2902799,
-    "elapsed": 87.3,
-    "args": {
-      "arxiv_ids": [
-        "2012.13966",
-        "1904.04735",
-        "2303.08829",
-        "1704.08670",
-        "2204.14038"
-      ],
-      "wing": "q-orca-physics",
-      "room": "zx-calculus"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2012.13966",
-          "state": "done",
-          "indexed_count": 361,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1904.04735",
-          "state": "done",
-          "indexed_count": 58,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2303.08829",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "1704.08670",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2204.14038",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        }
-      ],
-      "done": 2,
-      "total": 5
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778594315-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778594315-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/quantum-walks",
-    "state": "error",
-    "started_at": 1778594315.852312,
-    "finished_at": 1778594373.833684,
-    "elapsed": 58.0,
-    "args": {
-      "arxiv_ids": [
-        "2509.07702",
-        "2510.04973",
-        "2511.21608",
-        "2507.21011",
-        "2511.14513"
-      ],
-      "wing": "q-orca-physics",
-      "room": "quantum-walks"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2509.07702",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "2510.04973",
-          "state": "done",
-          "indexed_count": 178,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2511.21608",
-          "state": "done",
-          "indexed_count": 85,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2507.21011",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: HTTP Error 429: Unknown Error"
-        },
-        {
-          "arxiv_id": "2511.14513",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 2,
-      "total": 5
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778594747-3-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778594747-3-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-physics/quantum-walks",
-    "state": "error",
-    "started_at": 1778594747.978005,
-    "finished_at": 1778594773.666385,
-    "elapsed": 25.7,
-    "args": {
-      "arxiv_ids": [
-        "2509.07702",
-        "2507.21011",
-        "2511.14513"
-      ],
-      "wing": "q-orca-physics",
-      "room": "quantum-walks"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2509.07702",
-          "state": "done",
-          "indexed_count": 94,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2507.21011",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2511.14513",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 1,
-      "total": 3
-    },
-    "error": "2 paper(s) failed"
-  },
-  "batch_index-1778594890-2-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778594890-2-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "2-papers-q-orca-physics/quantum-walks",
-    "state": "error",
-    "started_at": 1778594890.241729,
-    "finished_at": 1778594891.1312509,
-    "elapsed": 0.9,
-    "args": {
-      "arxiv_ids": [
-        "2507.21011",
-        "2511.14513"
-      ],
-      "wing": "q-orca-physics",
-      "room": "quantum-walks"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2507.21011",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2511.14513",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 0,
-      "total": 2
-    },
-    "error": "2 paper(s) failed"
-  },
-  "index_local_pdf-1778618949-openreview_x8wscCAJ2m.pd": {
-    "job_id": "index_local_pdf-1778618949-openreview_x8wscCAJ2m.pd",
-    "tool": "index_local_pdf",
-    "label": "openreview_x8wscCAJ2m.pdf",
+    "label": "5-papers-q-orca-implementations/hardware",
     "state": "done",
-    "started_at": 1778618949.376449,
-    "finished_at": 1778618968.158975,
-    "elapsed": 18.8,
-    "args": {
-      "filename": "openreview_x8wscCAJ2m.pdf",
-      "wing": "q-orca-physics",
-      "room": "quantum-walks",
-      "name": "Sparse Neural Architectures via Deterministic Ramanujan Graphs (Kalra et al., TMLR 2025)"
-    },
-    "result": {
-      "filename": "openreview_x8wscCAJ2m.pdf",
-      "name": "Sparse Neural Architectures via Deterministic Ramanujan Graphs (Kalra et al., TMLR 2025)",
-      "wing": "q-orca-physics",
-      "room": "quantum-walks",
-      "chunk_count": 97,
-      "indexed_count": 97
-    },
-    "error": null
-  },
-  "batch_index-1778634663-3-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778634663-3-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-physics/llm-interpretability",
-    "state": "error",
-    "started_at": 1778634663.79521,
-    "finished_at": 1778635088.6610088,
-    "elapsed": 424.9,
+    "started_at": 1779970396.6397371,
+    "finished_at": 1779970582.574431,
+    "elapsed": 185.9,
     "args": {
       "arxiv_ids": [
-        "2602.03024",
-        "1909.01377",
-        "2006.08656"
-      ],
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2602.03024",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2602.03024&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1909.01377",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1909.01377&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2006.08656",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2006.08656&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 0,
-      "total": 3
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778635697-3-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778635697-3-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-physics/llm-interpretability",
-    "state": "error",
-    "started_at": 1778635697.7068548,
-    "finished_at": 1778636009.36165,
-    "elapsed": 311.7,
-    "args": {
-      "arxiv_ids": [
-        "2602.03024",
-        "1909.01377",
-        "2006.08656"
-      ],
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2602.03024",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2602.03024&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1909.01377",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1909.01377&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2006.08656",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2006.08656&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 0,
-      "total": 3
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1778674410-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778674410-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/azure-quantum",
-    "state": "error",
-    "started_at": 1778674410.4981272,
-    "finished_at": 1778674551.250923,
-    "elapsed": 140.8,
-    "args": {
-      "arxiv_ids": [
-        "1402.4467",
-        "2207.02472",
-        "2211.07629",
-        "2401.09549",
-        "2502.12252"
+        "2602.04831",
+        "2311.01168",
+        "2402.02127",
+        "2410.15590",
+        "2409.08229"
       ],
       "wing": "q-orca-implementations",
-      "room": "azure-quantum"
+      "room": "hardware"
     },
     "result": {
       "papers": [
         {
-          "arxiv_id": "1402.4467",
+          "arxiv_id": "2602.04831",
           "state": "done",
-          "indexed_count": 124,
+          "indexed_count": 261,
           "error": ""
         },
         {
-          "arxiv_id": "2207.02472",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2211.07629",
+          "arxiv_id": "2311.01168",
           "state": "done",
-          "indexed_count": 243,
+          "indexed_count": 187,
           "error": ""
         },
         {
-          "arxiv_id": "2401.09549",
+          "arxiv_id": "2402.02127",
           "state": "done",
-          "indexed_count": 222,
+          "indexed_count": 75,
           "error": ""
         },
         {
-          "arxiv_id": "2502.12252",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 3,
-      "total": 5
-    },
-    "error": "2 paper(s) failed"
-  },
-  "batch_index-1778760810-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1778760810-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/quantum-programming",
-    "state": "done",
-    "started_at": 1778760810.633492,
-    "finished_at": 1778760936.854096,
-    "elapsed": 126.2,
-    "args": {
-      "arxiv_ids": [
-        "1304.3390",
-        "2104.14722",
-        "2203.16969",
-        "1012.6035",
-        "1803.00699"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "quantum-programming"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1304.3390",
+          "arxiv_id": "2410.15590",
           "state": "done",
-          "indexed_count": 103,
+          "indexed_count": 49,
           "error": ""
         },
         {
-          "arxiv_id": "2104.14722",
+          "arxiv_id": "2409.08229",
           "state": "done",
-          "indexed_count": 226,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2203.16969",
-          "state": "done",
-          "indexed_count": 136,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1012.6035",
-          "state": "done",
-          "indexed_count": 150,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1803.00699",
-          "state": "done",
-          "indexed_count": 69,
+          "indexed_count": 338,
           "error": ""
         }
       ],
@@ -977,62 +112,5 @@
       "total": 5
     },
     "error": null
-  },
-  "batch_index-1778847227-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1778847227-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/verified-compilation",
-    "state": "error",
-    "started_at": 1778847227.706066,
-    "finished_at": 1778847658.0729148,
-    "elapsed": 430.4,
-    "args": {
-      "arxiv_ids": [
-        "1901.10118",
-        "1908.08963",
-        "2010.01240",
-        "2205.00661",
-        "2205.02287"
-      ],
-      "wing": "q-orca-physics",
-      "room": "verified-compilation"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1901.10118",
-          "state": "done",
-          "indexed_count": 67,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1908.08963",
-          "state": "done",
-          "indexed_count": 86,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2010.01240",
-          "state": "done",
-          "indexed_count": 110,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2205.00661",
-          "state": "done",
-          "indexed_count": 124,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2205.02287",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2205.02287&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 4,
-      "total": 5
-    },
-    "error": "1 paper(s) failed"
   }
 }
