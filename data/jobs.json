@@ -112,5 +112,326 @@
       "total": 5
     },
     "error": null
+  },
+  "batch_index-1780016121-4-papers-q-orca-physics/": {
+    "job_id": "batch_index-1780016121-4-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "4-papers-q-orca-physics/llm-interpretability",
+    "state": "error",
+    "started_at": 1780016121.186618,
+    "finished_at": 1780016260.7648351,
+    "elapsed": 139.6,
+    "args": {
+      "arxiv_ids": [
+        "2209.10652",
+        "2201.02177",
+        "2301.05217",
+        "2210.13382"
+      ],
+      "wing": "q-orca-physics",
+      "room": "llm-interpretability"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2209.10652",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2201.02177",
+          "state": "done",
+          "indexed_count": 46,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.05217",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2210.13382",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 1,
+      "total": 4
+    },
+    "error": "3 paper(s) failed"
+  },
+  "batch_index-1780016320-3-papers-q-orca-physics/": {
+    "job_id": "batch_index-1780016320-3-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "3-papers-q-orca-physics/llm-interpretability",
+    "state": "error",
+    "started_at": 1780016320.1748312,
+    "finished_at": 1780016322.661078,
+    "elapsed": 2.5,
+    "args": {
+      "arxiv_ids": [
+        "2209.10652",
+        "2301.05217",
+        "2210.13382"
+      ],
+      "wing": "q-orca-physics",
+      "room": "llm-interpretability"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2209.10652",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2301.05217",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        },
+        {
+          "arxiv_id": "2210.13382",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 0,
+      "total": 3
+    },
+    "error": "3 paper(s) failed"
+  },
+  "batch_index-1780074244-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1780074244-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/simulation",
+    "state": "done",
+    "started_at": 1780074244.8471801,
+    "finished_at": 1780074505.024693,
+    "elapsed": 260.2,
+    "args": {
+      "arxiv_ids": [
+        "1805.03662",
+        "1902.02134",
+        "1606.02685",
+        "1912.08854",
+        "2105.12767"
+      ],
+      "wing": "q-orca-physics",
+      "room": "simulation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1805.03662",
+          "state": "done",
+          "indexed_count": 238,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1902.02134",
+          "state": "done",
+          "indexed_count": 219,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1606.02685",
+          "state": "done",
+          "indexed_count": 41,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1912.08854",
+          "state": "done",
+          "indexed_count": 315,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2105.12767",
+          "state": "done",
+          "indexed_count": 534,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1780103399-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1780103399-5-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-implementations/orca-lang",
+    "state": "error",
+    "started_at": 1780103399.539077,
+    "finished_at": 1780104613.993451,
+    "elapsed": 1214.5,
+    "args": {
+      "arxiv_ids": [
+        "2207.11965",
+        "2407.17215",
+        "2403.11322",
+        "2604.00275",
+        "2212.03724"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "orca-lang"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2207.11965",
+          "state": "done",
+          "indexed_count": 98,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2407.17215",
+          "state": "done",
+          "indexed_count": 318,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2403.11322",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2403.11322&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2604.00275",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 503 (https://export.arxiv.org/api/query?search_query=&id_list=2604.00275&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2212.03724",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2212.03724&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        }
+      ],
+      "done": 2,
+      "total": 5
+    },
+    "error": "3 paper(s) failed"
+  },
+  "batch_index-1780143322-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1780143322-5-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-implementations/q-orca-lang",
+    "state": "done",
+    "started_at": 1780143322.440573,
+    "finished_at": 1780143533.273501,
+    "elapsed": 210.8,
+    "args": {
+      "arxiv_ids": [
+        "2101.11365",
+        "2409.10231",
+        "2005.08396",
+        "2304.15000",
+        "2110.01320"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "q-orca-lang"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2101.11365",
+          "state": "done",
+          "indexed_count": 78,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2409.10231",
+          "state": "done",
+          "indexed_count": 80,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2005.08396",
+          "state": "done",
+          "indexed_count": 61,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2304.15000",
+          "state": "done",
+          "indexed_count": 221,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2110.01320",
+          "state": "done",
+          "indexed_count": 181,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1780229676-5-papers-q-orca-physics/": {
+    "job_id": "batch_index-1780229676-5-papers-q-orca-physics/",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-physics/quantum-automata",
+    "state": "done",
+    "started_at": 1780229676.115872,
+    "finished_at": 1780229777.985434,
+    "elapsed": 101.9,
+    "args": {
+      "arxiv_ids": [
+        "1507.01988",
+        "1202.2651",
+        "1411.3870",
+        "1907.01471",
+        "2111.14041"
+      ],
+      "wing": "q-orca-physics",
+      "room": "quantum-automata"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1507.01988",
+          "state": "done",
+          "indexed_count": 147,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1202.2651",
+          "state": "done",
+          "indexed_count": 88,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1411.3870",
+          "state": "done",
+          "indexed_count": 106,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1907.01471",
+          "state": "done",
+          "indexed_count": 100,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2111.14041",
+          "state": "done",
+          "indexed_count": 93,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
   }
 }
