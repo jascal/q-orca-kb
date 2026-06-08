@@ -718,5 +718,176 @@
       "total": 5
     },
     "error": null
+  },
+  "batch_index-1780661698-5-papers-orca-lang/langu": {
+    "job_id": "batch_index-1780661698-5-papers-orca-lang/langu",
+    "tool": "batch_index",
+    "label": "5-papers-orca-lang/language-design",
+    "state": "error",
+    "started_at": 1780661698.151086,
+    "finished_at": 1780663454.938897,
+    "elapsed": 1756.8,
+    "args": {
+      "arxiv_ids": [
+        "2403.02296",
+        "2503.02557",
+        "2503.10955",
+        "2105.10687",
+        "1807.08588"
+      ],
+      "wing": "orca-lang",
+      "room": "language-design"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2403.02296",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2403.02296&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2503.02557",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 503 (https://export.arxiv.org/api/query?search_query=&id_list=2503.02557&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2503.10955",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2503.10955&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2105.10687",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2105.10687&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "1807.08588",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1807.08588&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        }
+      ],
+      "done": 0,
+      "total": 5
+    },
+    "error": "5 paper(s) failed"
+  },
+  "batch_index-1780748018-5-papers-orca-lang/langu": {
+    "job_id": "batch_index-1780748018-5-papers-orca-lang/langu",
+    "tool": "batch_index",
+    "label": "5-papers-orca-lang/language-design",
+    "state": "error",
+    "started_at": 1780748018.00594,
+    "finished_at": 1780749934.2770839,
+    "elapsed": 1916.3,
+    "args": {
+      "arxiv_ids": [
+        "2407.17215",
+        "2309.14884",
+        "2307.03790",
+        "1807.08588",
+        "2406.12324"
+      ],
+      "wing": "orca-lang",
+      "room": "language-design"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2407.17215",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2407.17215&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2309.14884",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 503 (https://export.arxiv.org/api/query?search_query=&id_list=2309.14884&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2307.03790",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2307.03790&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "1807.08588",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1807.08588&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
+        },
+        {
+          "arxiv_id": "2406.12324",
+          "state": "done",
+          "indexed_count": 195,
+          "error": ""
+        }
+      ],
+      "done": 1,
+      "total": 5
+    },
+    "error": "4 paper(s) failed"
+  },
+  "batch_index-1780834461-5-papers-orca-lang/langu": {
+    "job_id": "batch_index-1780834461-5-papers-orca-lang/langu",
+    "tool": "batch_index",
+    "label": "5-papers-orca-lang/language-design",
+    "state": "done",
+    "started_at": 1780834461.922601,
+    "finished_at": 1780834536.773958,
+    "elapsed": 74.9,
+    "args": {
+      "arxiv_ids": [
+        "1807.08588",
+        "2103.09682",
+        "2301.09597",
+        "2301.12852",
+        "2604.00275"
+      ],
+      "wing": "orca-lang",
+      "room": "language-design"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1807.08588",
+          "state": "done",
+          "indexed_count": 81,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2103.09682",
+          "state": "done",
+          "indexed_count": 77,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.09597",
+          "state": "done",
+          "indexed_count": 112,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.12852",
+          "state": "done",
+          "indexed_count": 60,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.00275",
+          "state": "done",
+          "indexed_count": 87,
+          "error": ""
+        }
+      ],
+      "done": 5,
+      "total": 5
+    },
+    "error": null
   }
 }
