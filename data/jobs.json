@@ -1,667 +1,4 @@
 {
-  "batch_index-1779936699-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1779936699-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/llm-interpretability",
-    "state": "error",
-    "started_at": 1779936699.854636,
-    "finished_at": 1779937293.040722,
-    "elapsed": 593.2,
-    "args": {
-      "arxiv_ids": [
-        "2310.01405",
-        "2209.10652",
-        "2201.02177",
-        "2301.05217",
-        "2210.13382"
-      ],
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2310.01405",
-          "state": "done",
-          "indexed_count": 280,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2209.10652",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2209.10652&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2201.02177",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2201.02177&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2301.05217",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2301.05217&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2210.13382",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2210.13382&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 1,
-      "total": 5
-    },
-    "error": "4 paper(s) failed"
-  },
-  "batch_index-1779970396-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1779970396-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/hardware",
-    "state": "done",
-    "started_at": 1779970396.6397371,
-    "finished_at": 1779970582.574431,
-    "elapsed": 185.9,
-    "args": {
-      "arxiv_ids": [
-        "2602.04831",
-        "2311.01168",
-        "2402.02127",
-        "2410.15590",
-        "2409.08229"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "hardware"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2602.04831",
-          "state": "done",
-          "indexed_count": 261,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2311.01168",
-          "state": "done",
-          "indexed_count": 187,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2402.02127",
-          "state": "done",
-          "indexed_count": 75,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2410.15590",
-          "state": "done",
-          "indexed_count": 49,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2409.08229",
-          "state": "done",
-          "indexed_count": 338,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780016121-4-papers-q-orca-physics/": {
-    "job_id": "batch_index-1780016121-4-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "4-papers-q-orca-physics/llm-interpretability",
-    "state": "error",
-    "started_at": 1780016121.186618,
-    "finished_at": 1780016260.7648351,
-    "elapsed": 139.6,
-    "args": {
-      "arxiv_ids": [
-        "2209.10652",
-        "2201.02177",
-        "2301.05217",
-        "2210.13382"
-      ],
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2209.10652",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2201.02177",
-          "state": "done",
-          "indexed_count": 46,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2301.05217",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2210.13382",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 1,
-      "total": 4
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1780016320-3-papers-q-orca-physics/": {
-    "job_id": "batch_index-1780016320-3-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "3-papers-q-orca-physics/llm-interpretability",
-    "state": "error",
-    "started_at": 1780016320.1748312,
-    "finished_at": 1780016322.661078,
-    "elapsed": 2.5,
-    "args": {
-      "arxiv_ids": [
-        "2209.10652",
-        "2301.05217",
-        "2210.13382"
-      ],
-      "wing": "q-orca-physics",
-      "room": "llm-interpretability"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2209.10652",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2301.05217",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        },
-        {
-          "arxiv_id": "2210.13382",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "extract: Stream has ended unexpectedly"
-        }
-      ],
-      "done": 0,
-      "total": 3
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1780074244-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1780074244-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/simulation",
-    "state": "done",
-    "started_at": 1780074244.8471801,
-    "finished_at": 1780074505.024693,
-    "elapsed": 260.2,
-    "args": {
-      "arxiv_ids": [
-        "1805.03662",
-        "1902.02134",
-        "1606.02685",
-        "1912.08854",
-        "2105.12767"
-      ],
-      "wing": "q-orca-physics",
-      "room": "simulation"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1805.03662",
-          "state": "done",
-          "indexed_count": 238,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1902.02134",
-          "state": "done",
-          "indexed_count": 219,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1606.02685",
-          "state": "done",
-          "indexed_count": 41,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1912.08854",
-          "state": "done",
-          "indexed_count": 315,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2105.12767",
-          "state": "done",
-          "indexed_count": 534,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780103399-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1780103399-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/orca-lang",
-    "state": "error",
-    "started_at": 1780103399.539077,
-    "finished_at": 1780104613.993451,
-    "elapsed": 1214.5,
-    "args": {
-      "arxiv_ids": [
-        "2207.11965",
-        "2407.17215",
-        "2403.11322",
-        "2604.00275",
-        "2212.03724"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "orca-lang"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2207.11965",
-          "state": "done",
-          "indexed_count": 98,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2407.17215",
-          "state": "done",
-          "indexed_count": 318,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2403.11322",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2403.11322&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2604.00275",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 503 (https://export.arxiv.org/api/query?search_query=&id_list=2604.00275&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "2212.03724",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2212.03724&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 2,
-      "total": 5
-    },
-    "error": "3 paper(s) failed"
-  },
-  "batch_index-1780143322-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1780143322-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/q-orca-lang",
-    "state": "done",
-    "started_at": 1780143322.440573,
-    "finished_at": 1780143533.273501,
-    "elapsed": 210.8,
-    "args": {
-      "arxiv_ids": [
-        "2101.11365",
-        "2409.10231",
-        "2005.08396",
-        "2304.15000",
-        "2110.01320"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "q-orca-lang"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2101.11365",
-          "state": "done",
-          "indexed_count": 78,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2409.10231",
-          "state": "done",
-          "indexed_count": 80,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2005.08396",
-          "state": "done",
-          "indexed_count": 61,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2304.15000",
-          "state": "done",
-          "indexed_count": 221,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2110.01320",
-          "state": "done",
-          "indexed_count": 181,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780229676-5-papers-q-orca-physics/": {
-    "job_id": "batch_index-1780229676-5-papers-q-orca-physics/",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-physics/quantum-automata",
-    "state": "done",
-    "started_at": 1780229676.115872,
-    "finished_at": 1780229777.985434,
-    "elapsed": 101.9,
-    "args": {
-      "arxiv_ids": [
-        "1507.01988",
-        "1202.2651",
-        "1411.3870",
-        "1907.01471",
-        "2111.14041"
-      ],
-      "wing": "q-orca-physics",
-      "room": "quantum-automata"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1507.01988",
-          "state": "done",
-          "indexed_count": 147,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1202.2651",
-          "state": "done",
-          "indexed_count": 88,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1411.3870",
-          "state": "done",
-          "indexed_count": 106,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1907.01471",
-          "state": "done",
-          "indexed_count": 100,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2111.14041",
-          "state": "done",
-          "indexed_count": 93,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780402525-5-papers-q-orca-implemen": {
-    "job_id": "batch_index-1780402525-5-papers-q-orca-implemen",
-    "tool": "batch_index",
-    "label": "5-papers-q-orca-implementations/orca-lang",
-    "state": "done",
-    "started_at": 1780402525.3957639,
-    "finished_at": 1780402588.751926,
-    "elapsed": 63.4,
-    "args": {
-      "arxiv_ids": [
-        "2410.19736",
-        "2306.09068",
-        "1603.07466",
-        "2505.18542",
-        "2410.18489"
-      ],
-      "wing": "q-orca-implementations",
-      "room": "orca-lang"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2410.19736",
-          "state": "done",
-          "indexed_count": 54,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2306.09068",
-          "state": "done",
-          "indexed_count": 39,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1603.07466",
-          "state": "done",
-          "indexed_count": 68,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2505.18542",
-          "state": "done",
-          "indexed_count": 104,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2410.18489",
-          "state": "done",
-          "indexed_count": 55,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780441076-5-papers-n-orca-lang/lan": {
-    "job_id": "batch_index-1780441076-5-papers-n-orca-lang/lan",
-    "tool": "batch_index",
-    "label": "5-papers-n-orca-lang/language-design",
-    "state": "done",
-    "started_at": 1780441076.788405,
-    "finished_at": 1780441179.6132858,
-    "elapsed": 102.8,
-    "args": {
-      "arxiv_ids": [
-        "1810.00952",
-        "2002.11054",
-        "2111.00254",
-        "1802.04799",
-        "2402.15332"
-      ],
-      "wing": "n-orca-lang",
-      "room": "language-design"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1810.00952",
-          "state": "done",
-          "indexed_count": 77,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2002.11054",
-          "state": "done",
-          "indexed_count": 129,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2111.00254",
-          "state": "done",
-          "indexed_count": 38,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1802.04799",
-          "state": "done",
-          "indexed_count": 114,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2402.15332",
-          "state": "done",
-          "indexed_count": 165,
-          "error": ""
-        }
-      ],
-      "done": 5,
-      "total": 5
-    },
-    "error": null
-  },
-  "batch_index-1780488870-5-papers-n-orca-lang/lan": {
-    "job_id": "batch_index-1780488870-5-papers-n-orca-lang/lan",
-    "tool": "batch_index",
-    "label": "5-papers-n-orca-lang/language-design",
-    "state": "error",
-    "started_at": 1780488870.102067,
-    "finished_at": 1780489334.243998,
-    "elapsed": 464.1,
-    "args": {
-      "arxiv_ids": [
-        "1802.04799",
-        "2002.11054",
-        "1904.08368",
-        "2104.05372",
-        "2212.10307"
-      ],
-      "wing": "n-orca-lang",
-      "room": "language-design"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "1802.04799",
-          "state": "done",
-          "indexed_count": 114,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2002.11054",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2002.11054&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1904.08368",
-          "state": "done",
-          "indexed_count": 107,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2104.05372",
-          "state": "done",
-          "indexed_count": 165,
-          "error": ""
-        },
-        {
-          "arxiv_id": "2212.10307",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2212.10307&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 3,
-      "total": 5
-    },
-    "error": "2 paper(s) failed"
-  },
-  "batch_index-1780575255-5-papers-n-orca-lang/lan": {
-    "job_id": "batch_index-1780575255-5-papers-n-orca-lang/lan",
-    "tool": "batch_index",
-    "label": "5-papers-n-orca-lang/language-design",
-    "state": "error",
-    "started_at": 1780575255.032147,
-    "finished_at": 1780576096.929322,
-    "elapsed": 841.9,
-    "args": {
-      "arxiv_ids": [
-        "2002.11054",
-        "1810.11530",
-        "1802.04730",
-        "1711.03016",
-        "1806.02136"
-      ],
-      "wing": "n-orca-lang",
-      "room": "language-design"
-    },
-    "result": {
-      "papers": [
-        {
-          "arxiv_id": "2002.11054",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2002.11054&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1810.11530",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1810.11530&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1802.04730",
-          "state": "done",
-          "indexed_count": 202,
-          "error": ""
-        },
-        {
-          "arxiv_id": "1711.03016",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1711.03016&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        },
-        {
-          "arxiv_id": "1806.02136",
-          "state": "aborted",
-          "indexed_count": 0,
-          "error": "fetch: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=1806.02136&sortBy=relevance&sortOrder=descending&start=0&max_results=100)"
-        }
-      ],
-      "done": 1,
-      "total": 5
-    },
-    "error": "4 paper(s) failed"
-  },
   "batch_index-1780577886-5-papers-n-orca-lang/wor": {
     "job_id": "batch_index-1780577886-5-papers-n-orca-lang/wor",
     "tool": "batch_index",
@@ -886,6 +223,708 @@
         }
       ],
       "done": 5,
+      "total": 5
+    },
+    "error": null
+  },
+  "batch_index-1781007252-5-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007252-5-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "5-papers-orca-lang/decision-tables",
+    "state": "error",
+    "started_at": 1781007252.451651,
+    "finished_at": 1781007268.457485,
+    "elapsed": 16.0,
+    "args": {
+      "arxiv_ids": [
+        "1807.11615",
+        "2005.09998",
+        "2312.11186",
+        "2604.17153",
+        "1804.02316"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1807.11615",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "2005.09998",
+          "state": "done",
+          "indexed_count": 56,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2312.11186",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "2604.17153",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: HTTP Error 429: Unknown Error"
+        },
+        {
+          "arxiv_id": "1804.02316",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "fetch: <urlopen error retrieval incomplete: got only 1048576 out of 3361499 bytes>"
+        }
+      ],
+      "done": 1,
+      "total": 5
+    },
+    "error": "4 paper(s) failed"
+  },
+  "batch_index-1781007349-4-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007349-4-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "4-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007349.405317,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "1807.11615",
+        "2312.11186",
+        "2604.17153",
+        "1804.02316"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1807.11615",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2312.11186",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.17153",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1804.02316",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 4
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007391-4-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007391-4-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "4-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007391.1068192,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "1807.11615",
+        "2312.11186",
+        "2604.17153",
+        "1804.02316"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1807.11615",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2312.11186",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.17153",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1804.02316",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 4
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007438-3-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007438-3-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "3-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007438.2366521,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2312.11186",
+        "2604.17153",
+        "1804.02316"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2312.11186",
+          "state": "done",
+          "indexed_count": 90,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2604.17153",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1804.02316",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 1,
+      "total": 3
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007493-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007493-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007493.3666902,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2604.17153"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2604.17153",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007548-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007548-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "error",
+    "started_at": 1781007548.1000478,
+    "finished_at": 1781007548.433561,
+    "elapsed": 0.3,
+    "args": {
+      "arxiv_ids": [
+        "1804.02316"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1804.02316",
+          "state": "aborted",
+          "indexed_count": 0,
+          "error": "extract: Stream has ended unexpectedly"
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "1 paper(s) failed"
+  },
+  "batch_index-1781007599-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007599-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007599.424285,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "1807.11615"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "1807.11615",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007692-3-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007692-3-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "3-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007692.887228,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2401.14847",
+        "2512.15214",
+        "2505.11701"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2401.14847",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2512.15214",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2505.11701",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 3
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007744-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007744-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007744.5825899,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2512.15214"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2512.15214",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007796-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007796-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007796.2557042,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2505.11701"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2505.11701",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781007881-1-papers-orca-lang/decis": {
+    "job_id": "batch_index-1781007881-1-papers-orca-lang/decis",
+    "tool": "batch_index",
+    "label": "1-papers-orca-lang/decision-tables",
+    "state": "interrupted",
+    "started_at": 1781007881.2718048,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2401.14847"
+      ],
+      "wing": "orca-lang",
+      "room": "decision-tables"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2401.14847",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 1
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781094093-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1781094093-5-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-implementations/n-orca-lang",
+    "state": "interrupted",
+    "started_at": 1781094093.6679418,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2002.11054",
+        "1805.00907",
+        "1502.05767",
+        "1907.07587",
+        "2006.06762"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "n-orca-lang"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2002.11054",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.00907",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1502.05767",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1907.07587",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2006.06762",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 5
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781094171-5-papers-q-orca-implemen": {
+    "job_id": "batch_index-1781094171-5-papers-q-orca-implemen",
+    "tool": "batch_index",
+    "label": "5-papers-q-orca-implementations/n-orca-lang",
+    "state": "interrupted",
+    "started_at": 1781094171.814094,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2002.11054",
+        "1805.00907",
+        "1502.05767",
+        "1907.07587",
+        "2006.06762"
+      ],
+      "wing": "q-orca-implementations",
+      "room": "n-orca-lang"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2002.11054",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.00907",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1502.05767",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1907.07587",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2006.06762",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 5
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781180168-5-papers-n-orca-lang/com": {
+    "job_id": "batch_index-1781180168-5-papers-n-orca-lang/com",
+    "tool": "batch_index",
+    "label": "5-papers-n-orca-lang/compilation",
+    "state": "interrupted",
+    "started_at": 1781180168.9797592,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2006.06762",
+        "1805.00907",
+        "2311.02103",
+        "2002.03794",
+        "2301.01333"
+      ],
+      "wing": "n-orca-lang",
+      "room": "compilation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2006.06762",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.00907",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2311.02103",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2002.03794",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.01333",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 5
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781180227-5-papers-n-orca-lang/com": {
+    "job_id": "batch_index-1781180227-5-papers-n-orca-lang/com",
+    "tool": "batch_index",
+    "label": "5-papers-n-orca-lang/compilation",
+    "state": "interrupted",
+    "started_at": 1781180227.2719529,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2006.06762",
+        "1805.00907",
+        "2311.02103",
+        "2002.03794",
+        "2301.01333"
+      ],
+      "wing": "n-orca-lang",
+      "room": "compilation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2006.06762",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.00907",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2311.02103",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2002.03794",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.01333",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
+      "total": 5
+    },
+    "error": "Server restarted while job was running"
+  },
+  "batch_index-1781180292-5-papers-n-orca-lang/com": {
+    "job_id": "batch_index-1781180292-5-papers-n-orca-lang/com",
+    "tool": "batch_index",
+    "label": "5-papers-n-orca-lang/compilation",
+    "state": "running",
+    "started_at": 1781180292.3740852,
+    "finished_at": null,
+    "elapsed": null,
+    "args": {
+      "arxiv_ids": [
+        "2006.06762",
+        "1805.00907",
+        "2311.02103",
+        "2002.03794",
+        "2301.01333"
+      ],
+      "wing": "n-orca-lang",
+      "room": "compilation"
+    },
+    "result": {
+      "papers": [
+        {
+          "arxiv_id": "2006.06762",
+          "state": "running",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "1805.00907",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2311.02103",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2002.03794",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        },
+        {
+          "arxiv_id": "2301.01333",
+          "state": "queued",
+          "indexed_count": 0,
+          "error": ""
+        }
+      ],
+      "done": 0,
       "total": 5
     },
     "error": null
